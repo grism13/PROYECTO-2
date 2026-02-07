@@ -59,7 +59,6 @@
             LOGO.SizeMode = PictureBoxSizeMode.Zoom;
             LOGO.TabIndex = 0;
             LOGO.TabStop = false;
-            LOGO.Click += pictureBox1_Click;
             // 
             // LOGOTIPO
             // 
@@ -71,7 +70,6 @@
             LOGOTIPO.SizeMode = PictureBoxSizeMode.Zoom;
             LOGOTIPO.TabIndex = 1;
             LOGOTIPO.TabStop = false;
-            LOGOTIPO.Click += pictureBox2_Click;
             // 
             // menubtn
             // 
@@ -90,7 +88,7 @@
             menubtn.TabIndex = 2;
             menubtn.Text = "MENU";
             menubtn.UseVisualStyleBackColor = false;
-            menubtn.Click += button1_Click;
+            menubtn.Click += menubtn_Click;
             // 
             // mesasbtn
             // 
@@ -160,7 +158,6 @@
             salirbtn.TabIndex = 5;
             salirbtn.Text = "SALIR";
             salirbtn.UseVisualStyleBackColor = false;
-            salirbtn.Click += button6_Click;
             // 
             // OrdenesImg
             // 
@@ -181,7 +178,6 @@
             SalirImg.SizeMode = PictureBoxSizeMode.Zoom;
             SalirImg.TabIndex = 11;
             SalirImg.TabStop = false;
-            SalirImg.Click += pictureBox3_Click;
             // 
             // MesaImg
             // 
@@ -235,7 +231,6 @@
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "Form1";
             Text = "EL PALMERO RESTAURANT";
-            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)LOGO).EndInit();
             ((System.ComponentModel.ISupportInitialize)LOGOTIPO).EndInit();
             ((System.ComponentModel.ISupportInitialize)OrdenesImg).EndInit();

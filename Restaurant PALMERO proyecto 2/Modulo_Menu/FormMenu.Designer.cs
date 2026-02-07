@@ -50,14 +50,14 @@
             btnGuardar = new Button();
             btnEliminar = new Button();
             dgvPlatos = new DataGridView();
-            ColumnaNombre = new DataGridViewTextBoxColumn();
-            ColumnaPrecio = new DataGridViewTextBoxColumn();
-            ColumnaCategoría = new DataGridViewTextBoxColumn();
-            ColumnaDescripción = new DataGridViewTextBoxColumn();
             textoenelmenu = new Label();
             txtBuscar = new TextBox();
             LupaImg = new PictureBox();
             pictureBox1 = new PictureBox();
+            ColumnaNombre = new DataGridViewTextBoxColumn();
+            ColumnaPrecio = new DataGridViewTextBoxColumn();
+            ColumnaCategoría = new DataGridViewTextBoxColumn();
+            ColumnaDescripción = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)MenuImg).BeginInit();
             ((System.ComponentModel.ISupportInitialize)MenuTxt).BeginInit();
             panel1.SuspendLayout();
@@ -79,7 +79,7 @@
             // 
             MenuImg.BackColor = Color.Transparent;
             MenuImg.Image = Properties.Resources.menu;
-            MenuImg.Location = new Point(-3, -35);
+            MenuImg.Location = new Point(-18, -51);
             MenuImg.Name = "MenuImg";
             MenuImg.Size = new Size(192, 189);
             MenuImg.SizeMode = PictureBoxSizeMode.Zoom;
@@ -90,7 +90,7 @@
             // 
             MenuTxt.BackColor = Color.Transparent;
             MenuTxt.Image = Properties.Resources.MenuTxt;
-            MenuTxt.Location = new Point(126, 12);
+            MenuTxt.Location = new Point(107, -1);
             MenuTxt.Name = "MenuTxt";
             MenuTxt.Size = new Size(155, 102);
             MenuTxt.SizeMode = PictureBoxSizeMode.Zoom;
@@ -177,7 +177,6 @@
             ReferenciaImg.Size = new Size(125, 95);
             ReferenciaImg.TabIndex = 3;
             ReferenciaImg.TabStop = false;
-            ReferenciaImg.Click += pictureBox1_Click;
             // 
             // CamaraImg
             // 
@@ -188,7 +187,6 @@
             CamaraImg.SizeMode = PictureBoxSizeMode.Zoom;
             CamaraImg.TabIndex = 3;
             CamaraImg.TabStop = false;
-            CamaraImg.Click += pictureBox3_Click_1;
             // 
             // pictureBox2
             // 
@@ -212,7 +210,6 @@
             txIngredientes.Name = "txIngredientes";
             txIngredientes.Size = new Size(262, 78);
             txIngredientes.TabIndex = 5;
-            txIngredientes.TextChanged += txIngredientes_TextChanged;
             // 
             // DescripcionTxt
             // 
@@ -232,11 +229,11 @@
             cmbCategoria.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbCategoria.ForeColor = Color.Black;
             cmbCategoria.FormattingEnabled = true;
+            cmbCategoria.Items.AddRange(new object[] { "Entrada", "Plato fuerte", "Postre", "Bebida" });
             cmbCategoria.Location = new Point(46, 244);
             cmbCategoria.Name = "cmbCategoria";
             cmbCategoria.Size = new Size(262, 25);
             cmbCategoria.TabIndex = 3;
-            cmbCategoria.SelectedIndexChanged += cmbCategoria_SelectedIndexChanged;
             // 
             // CategoriaTxt
             // 
@@ -257,7 +254,6 @@
             PrecioTxt.SizeMode = PictureBoxSizeMode.Zoom;
             PrecioTxt.TabIndex = 7;
             PrecioTxt.TabStop = false;
-            PrecioTxt.Click += pictureBox3_Click;
             // 
             // txtNombre
             // 
@@ -271,7 +267,6 @@
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(262, 38);
             txtNombre.TabIndex = 3;
-            txtNombre.TextChanged += textBox1_TextChanged;
             // 
             // NombreTxt
             // 
@@ -282,7 +277,6 @@
             NombreTxt.SizeMode = PictureBoxSizeMode.Zoom;
             NombreTxt.TabIndex = 6;
             NombreTxt.TabStop = false;
-            NombreTxt.Click += NombreTxt_Click;
             // 
             // btnEditar
             // 
@@ -353,43 +347,17 @@
             dgvPlatos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvPlatos.Size = new Size(785, 535);
             dgvPlatos.TabIndex = 14;
-            dgvPlatos.CellContentClick += dgvPlatos_CellContentClick;
-            // 
-            // ColumnaNombre
-            // 
-            ColumnaNombre.HeaderText = "NOMBRE";
-            ColumnaNombre.Name = "ColumnaNombre";
-            ColumnaNombre.ReadOnly = true;
-            // 
-            // ColumnaPrecio
-            // 
-            ColumnaPrecio.HeaderText = "PRECIO";
-            ColumnaPrecio.Name = "ColumnaPrecio";
-            ColumnaPrecio.ReadOnly = true;
-            // 
-            // ColumnaCategoría
-            // 
-            ColumnaCategoría.HeaderText = "CATEGORIA";
-            ColumnaCategoría.Name = "ColumnaCategoría";
-            ColumnaCategoría.ReadOnly = true;
-            // 
-            // ColumnaDescripción
-            // 
-            ColumnaDescripción.HeaderText = "DESCRIPCION";
-            ColumnaDescripción.Name = "ColumnaDescripción";
-            ColumnaDescripción.ReadOnly = true;
             // 
             // textoenelmenu
             // 
             textoenelmenu.AutoSize = true;
             textoenelmenu.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textoenelmenu.ForeColor = Color.SlateGray;
-            textoenelmenu.Location = new Point(287, 49);
+            textoenelmenu.Location = new Point(32, 93);
             textoenelmenu.Name = "textoenelmenu";
             textoenelmenu.Size = new Size(350, 17);
             textoenelmenu.TabIndex = 15;
             textoenelmenu.Text = "Administra los platillos del menu, agrega, edita y eliminalos";
-            textoenelmenu.Click += label1_Click;
             // 
             // txtBuscar
             // 
@@ -406,7 +374,7 @@
             // LupaImg
             // 
             LupaImg.Image = Properties.Resources.LupaImg;
-            LupaImg.Location = new Point(763, 79);
+            LupaImg.Location = new Point(762, 78);
             LupaImg.Name = "LupaImg";
             LupaImg.Size = new Size(51, 50);
             LupaImg.SizeMode = PictureBoxSizeMode.Zoom;
@@ -422,6 +390,34 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 18;
             pictureBox1.TabStop = false;
+            // 
+            // ColumnaNombre
+            // 
+            ColumnaNombre.DataPropertyName = "Nombre";
+            ColumnaNombre.HeaderText = "NOMBRE";
+            ColumnaNombre.Name = "ColumnaNombre";
+            ColumnaNombre.ReadOnly = true;
+            // 
+            // ColumnaPrecio
+            // 
+            ColumnaPrecio.DataPropertyName = "Precio";
+            ColumnaPrecio.HeaderText = "PRECIO";
+            ColumnaPrecio.Name = "ColumnaPrecio";
+            ColumnaPrecio.ReadOnly = true;
+            // 
+            // ColumnaCategoría
+            // 
+            ColumnaCategoría.DataPropertyName = "Categoria";
+            ColumnaCategoría.HeaderText = "CATEGORIA";
+            ColumnaCategoría.Name = "ColumnaCategoría";
+            ColumnaCategoría.ReadOnly = true;
+            // 
+            // ColumnaDescripción
+            // 
+            ColumnaDescripción.DataPropertyName = "Descripcion";
+            ColumnaDescripción.HeaderText = "DESCRIPCION";
+            ColumnaDescripción.Name = "ColumnaDescripción";
+            ColumnaDescripción.ReadOnly = true;
             // 
             // FormMenu
             // 
@@ -442,6 +438,7 @@
             Controls.Add(pictureBox1);
             Name = "FormMenu";
             Text = "FormMenu";
+            Load += FormMenu_Load;
             ((System.ComponentModel.ISupportInitialize)MenuImg).EndInit();
             ((System.ComponentModel.ISupportInitialize)MenuTxt).EndInit();
             panel1.ResumeLayout(false);
@@ -485,13 +482,13 @@
         private Button btnGuardar;
         private Button btnEliminar;
         private DataGridView dgvPlatos;
-        private DataGridViewTextBoxColumn ColumnaNombre;
-        private DataGridViewTextBoxColumn ColumnaPrecio;
-        private DataGridViewTextBoxColumn ColumnaCategoría;
-        private DataGridViewTextBoxColumn ColumnaDescripción;
         private Label textoenelmenu;
         private TextBox txtBuscar;
         private PictureBox LupaImg;
         private PictureBox pictureBox1;
+        private DataGridViewTextBoxColumn ColumnaNombre;
+        private DataGridViewTextBoxColumn ColumnaPrecio;
+        private DataGridViewTextBoxColumn ColumnaCategoría;
+        private DataGridViewTextBoxColumn ColumnaDescripción;
     }
 }
