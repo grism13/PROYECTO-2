@@ -53,9 +53,9 @@
             // 
             LOGO.BackColor = Color.Transparent;
             LOGO.Image = Properties.Resources.logo_palmero_solo_texto_sin_fondo;
-            LOGO.Location = new Point(69, 22);
+            LOGO.Location = new Point(157, 101);
             LOGO.Name = "LOGO";
-            LOGO.Size = new Size(885, 262);
+            LOGO.Size = new Size(1088, 326);
             LOGO.SizeMode = PictureBoxSizeMode.Zoom;
             LOGO.TabIndex = 0;
             LOGO.TabStop = false;
@@ -65,9 +65,9 @@
             // 
             LOGOTIPO.BackColor = Color.Transparent;
             LOGOTIPO.Image = Properties.Resources.logo_website_icon_2;
-            LOGOTIPO.Location = new Point(460, 12);
+            LOGOTIPO.Location = new Point(620, 78);
             LOGOTIPO.Name = "LOGOTIPO";
-            LOGOTIPO.Size = new Size(119, 95);
+            LOGOTIPO.Size = new Size(180, 130);
             LOGOTIPO.SizeMode = PictureBoxSizeMode.Zoom;
             LOGOTIPO.TabIndex = 1;
             LOGOTIPO.TabStop = false;
@@ -84,7 +84,7 @@
             menubtn.FlatStyle = FlatStyle.Flat;
             menubtn.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             menubtn.ForeColor = Color.White;
-            menubtn.Location = new Point(259, 287);
+            menubtn.Location = new Point(463, 448);
             menubtn.Name = "menubtn";
             menubtn.Size = new Size(234, 46);
             menubtn.TabIndex = 2;
@@ -102,7 +102,7 @@
             mesasbtn.FlatStyle = FlatStyle.Flat;
             mesasbtn.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             mesasbtn.ForeColor = Color.White;
-            mesasbtn.Location = new Point(259, 366);
+            mesasbtn.Location = new Point(463, 527);
             mesasbtn.Name = "mesasbtn";
             mesasbtn.Size = new Size(234, 44);
             mesasbtn.TabIndex = 3;
@@ -119,7 +119,7 @@
             cajabtn.FlatStyle = FlatStyle.Flat;
             cajabtn.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cajabtn.ForeColor = Color.White;
-            cajabtn.Location = new Point(605, 287);
+            cajabtn.Location = new Point(809, 448);
             cajabtn.Name = "cajabtn";
             cajabtn.Size = new Size(234, 46);
             cajabtn.TabIndex = 7;
@@ -136,7 +136,7 @@
             ordenesbtn.FlatStyle = FlatStyle.Flat;
             ordenesbtn.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ordenesbtn.ForeColor = Color.White;
-            ordenesbtn.Location = new Point(605, 366);
+            ordenesbtn.Location = new Point(809, 527);
             ordenesbtn.Name = "ordenesbtn";
             ordenesbtn.Size = new Size(234, 44);
             ordenesbtn.TabIndex = 6;
@@ -154,7 +154,7 @@
             salirbtn.FlatStyle = FlatStyle.Flat;
             salirbtn.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             salirbtn.ForeColor = Color.White;
-            salirbtn.Location = new Point(42, 12);
+            salirbtn.Location = new Point(71, 46);
             salirbtn.Name = "salirbtn";
             salirbtn.Size = new Size(65, 21);
             salirbtn.TabIndex = 5;
@@ -164,8 +164,8 @@
             // 
             // OrdenesImg
             // 
-            OrdenesImg.Image = Properties.Resources.Diseño_sin_título__1_;
-            OrdenesImg.Location = new Point(513, 339);
+            OrdenesImg.Image = Properties.Resources.ordenes;
+            OrdenesImg.Location = new Point(717, 500);
             OrdenesImg.Name = "OrdenesImg";
             OrdenesImg.Size = new Size(99, 111);
             OrdenesImg.SizeMode = PictureBoxSizeMode.Zoom;
@@ -174,8 +174,8 @@
             // 
             // SalirImg
             // 
-            SalirImg.Image = Properties.Resources.Diseño_sin_título__2_;
-            SalirImg.Location = new Point(-12, -10);
+            SalirImg.Image = Properties.Resources.salir;
+            SalirImg.Location = new Point(17, 24);
             SalirImg.Name = "SalirImg";
             SalirImg.Size = new Size(75, 62);
             SalirImg.SizeMode = PictureBoxSizeMode.Zoom;
@@ -185,8 +185,8 @@
             // 
             // MesaImg
             // 
-            MesaImg.Image = Properties.Resources.Diseño_sin_título__3_;
-            MesaImg.Location = new Point(174, 339);
+            MesaImg.Image = Properties.Resources.mesas;
+            MesaImg.Location = new Point(378, 500);
             MesaImg.Name = "MesaImg";
             MesaImg.Size = new Size(102, 111);
             MesaImg.SizeMode = PictureBoxSizeMode.Zoom;
@@ -195,8 +195,8 @@
             // 
             // MenuImg
             // 
-            MenuImg.Image = Properties.Resources.Diseño_sin_título__4_;
-            MenuImg.Location = new Point(174, 249);
+            MenuImg.Image = Properties.Resources.menu;
+            MenuImg.Location = new Point(378, 410);
             MenuImg.Name = "MenuImg";
             MenuImg.Size = new Size(102, 111);
             MenuImg.SizeMode = PictureBoxSizeMode.Zoom;
@@ -205,8 +205,8 @@
             // 
             // CajaImg
             // 
-            CajaImg.Image = Properties.Resources.Diseño_sin_título;
-            CajaImg.Location = new Point(513, 249);
+            CajaImg.Image = Properties.Resources.caja;
+            CajaImg.Location = new Point(717, 410);
             CajaImg.Name = "CajaImg";
             CajaImg.Size = new Size(99, 111);
             CajaImg.SizeMode = PictureBoxSizeMode.Zoom;
@@ -218,7 +218,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.GhostWhite;
-            ClientSize = new Size(1033, 450);
+            ClientSize = new Size(1355, 678);
             Controls.Add(cajabtn);
             Controls.Add(ordenesbtn);
             Controls.Add(salirbtn);
