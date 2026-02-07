@@ -36,6 +36,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1365, 675);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FormOrdenes";
             Text = "FormOrdenes";
             ResumeLayout(false);

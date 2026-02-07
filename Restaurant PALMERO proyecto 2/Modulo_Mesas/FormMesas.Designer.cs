@@ -36,6 +36,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1354, 672);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FormMesas";
             Text = "FormMesas";
             ResumeLayout(false);

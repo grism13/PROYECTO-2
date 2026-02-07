@@ -36,6 +36,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1349, 679);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FormCaja";
             Text = "FormCaja";
             ResumeLayout(false);

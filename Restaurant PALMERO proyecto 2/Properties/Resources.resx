@@ -118,23 +118,41 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="logo palmero solo texto sin fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo palmero solo texto sin fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="PrecioTxt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PrecioTxt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo palmero vec" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo palmero vec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LupaImg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LupaImg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo website icon 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo website icon 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ordenes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ordenes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ReferenciaTxt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ReferenciaTxt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo palmero vec" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo palmero vec.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuTxt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MenuTxt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logo palmero vec sin fondo azul marino" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo palmero vec sin fondo azul marino.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo palmero vec sin fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo palmero vec sin fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="logo palmero e" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo palmero e.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CategoriaTxt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CategoriaTxt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CamaraImg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CamaraImg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mesas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mesas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo completo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo completo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,16 +160,31 @@
   <data name="salir" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\salir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ordenes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ordenes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo palmero solo texto sin fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo palmero solo texto sin fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mesas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mesas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DolarImg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DolarImg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo palmero vec sin fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo palmero vec sin fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="caja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\caja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NombreTxt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NombreTxt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DescripcionTxt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DescripcionTxt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CamaraImg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CamaraImg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="caja" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\caja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BuscarTxt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BuscarTxt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
