@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             MenuImg = new PictureBox();
             MenuTxt = new PictureBox();
             panel1 = new Panel();
             panel2 = new Panel();
             txtPrecio = new TextBox();
             dolarimg = new PictureBox();
-            btnSubirFoto = new Button();
-            ReferenciaImg = new PictureBox();
-            CamaraImg = new PictureBox();
-            pictureBox2 = new PictureBox();
             txIngredientes = new TextBox();
             DescripcionTxt = new PictureBox();
             cmbCategoria = new ComboBox();
@@ -50,22 +50,19 @@
             btnGuardar = new Button();
             btnEliminar = new Button();
             dgvPlatos = new DataGridView();
-            textoenelmenu = new Label();
-            txtBuscar = new TextBox();
-            LupaImg = new PictureBox();
-            pictureBox1 = new PictureBox();
             ColumnaNombre = new DataGridViewTextBoxColumn();
             ColumnaPrecio = new DataGridViewTextBoxColumn();
             ColumnaCategoría = new DataGridViewTextBoxColumn();
             ColumnaDescripción = new DataGridViewTextBoxColumn();
+            textoenelmenu = new Label();
+            txtBuscar = new TextBox();
+            LupaImg = new PictureBox();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)MenuImg).BeginInit();
             ((System.ComponentModel.ISupportInitialize)MenuTxt).BeginInit();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dolarimg).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)ReferenciaImg).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)CamaraImg).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)DescripcionTxt).BeginInit();
             ((System.ComponentModel.ISupportInitialize)CategoriaTxt).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PrecioTxt).BeginInit();
@@ -104,7 +101,7 @@
             panel1.Controls.Add(panel2);
             panel1.Location = new Point(873, 28);
             panel1.Name = "panel1";
-            panel1.Size = new Size(396, 598);
+            panel1.Size = new Size(396, 507);
             panel1.TabIndex = 2;
             // 
             // panel2
@@ -112,10 +109,6 @@
             panel2.BackColor = Color.White;
             panel2.Controls.Add(txtPrecio);
             panel2.Controls.Add(dolarimg);
-            panel2.Controls.Add(btnSubirFoto);
-            panel2.Controls.Add(ReferenciaImg);
-            panel2.Controls.Add(CamaraImg);
-            panel2.Controls.Add(pictureBox2);
             panel2.Controls.Add(txIngredientes);
             panel2.Controls.Add(DescripcionTxt);
             panel2.Controls.Add(cmbCategoria);
@@ -125,7 +118,7 @@
             panel2.Controls.Add(NombreTxt);
             panel2.Location = new Point(18, 21);
             panel2.Name = "panel2";
-            panel2.Size = new Size(362, 553);
+            panel2.Size = new Size(362, 469);
             panel2.TabIndex = 3;
             // 
             // txtPrecio
@@ -135,7 +128,7 @@
             txtPrecio.Cursor = Cursors.IBeam;
             txtPrecio.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtPrecio.ForeColor = Color.Black;
-            txtPrecio.Location = new Point(46, 141);
+            txtPrecio.Location = new Point(55, 158);
             txtPrecio.Multiline = true;
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(212, 39);
@@ -145,58 +138,12 @@
             // 
             dolarimg.BackColor = Color.Transparent;
             dolarimg.Image = Properties.Resources.DolarImg;
-            dolarimg.Location = new Point(236, 132);
+            dolarimg.Location = new Point(245, 149);
             dolarimg.Name = "dolarimg";
             dolarimg.Size = new Size(81, 57);
             dolarimg.SizeMode = PictureBoxSizeMode.Zoom;
             dolarimg.TabIndex = 3;
             dolarimg.TabStop = false;
-            // 
-            // btnSubirFoto
-            // 
-            btnSubirFoto.BackColor = Color.Transparent;
-            btnSubirFoto.BackgroundImage = Properties.Resources.logo_completo;
-            btnSubirFoto.FlatAppearance.BorderSize = 0;
-            btnSubirFoto.FlatStyle = FlatStyle.Flat;
-            btnSubirFoto.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSubirFoto.ForeColor = Color.White;
-            btnSubirFoto.Location = new Point(56, 493);
-            btnSubirFoto.Name = "btnSubirFoto";
-            btnSubirFoto.Size = new Size(122, 31);
-            btnSubirFoto.TabIndex = 3;
-            btnSubirFoto.Text = "SUBIR FOTO";
-            btnSubirFoto.UseVisualStyleBackColor = false;
-            btnSubirFoto.Click += btnSubirFoto_Click;
-            // 
-            // ReferenciaImg
-            // 
-            ReferenciaImg.BackColor = Color.Transparent;
-            ReferenciaImg.BorderStyle = BorderStyle.FixedSingle;
-            ReferenciaImg.Location = new Point(211, 444);
-            ReferenciaImg.Name = "ReferenciaImg";
-            ReferenciaImg.Size = new Size(125, 95);
-            ReferenciaImg.TabIndex = 3;
-            ReferenciaImg.TabStop = false;
-            // 
-            // CamaraImg
-            // 
-            CamaraImg.Image = Properties.Resources.CamaraImg1;
-            CamaraImg.Location = new Point(-15, 466);
-            CamaraImg.Name = "CamaraImg";
-            CamaraImg.Size = new Size(110, 87);
-            CamaraImg.SizeMode = PictureBoxSizeMode.Zoom;
-            CamaraImg.TabIndex = 3;
-            CamaraImg.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = Properties.Resources.ReferenciaTxt;
-            pictureBox2.Location = new Point(24, 421);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(181, 66);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 10;
-            pictureBox2.TabStop = false;
             // 
             // txIngredientes
             // 
@@ -205,7 +152,7 @@
             txIngredientes.Cursor = Cursors.IBeam;
             txIngredientes.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txIngredientes.ForeColor = Color.Black;
-            txIngredientes.Location = new Point(46, 337);
+            txIngredientes.Location = new Point(55, 354);
             txIngredientes.Multiline = true;
             txIngredientes.Name = "txIngredientes";
             txIngredientes.Size = new Size(262, 78);
@@ -214,7 +161,7 @@
             // DescripcionTxt
             // 
             DescripcionTxt.Image = Properties.Resources.DescripcionTxt;
-            DescripcionTxt.Location = new Point(17, 287);
+            DescripcionTxt.Location = new Point(26, 304);
             DescripcionTxt.Name = "DescripcionTxt";
             DescripcionTxt.Size = new Size(203, 69);
             DescripcionTxt.SizeMode = PictureBoxSizeMode.Zoom;
@@ -230,7 +177,7 @@
             cmbCategoria.ForeColor = Color.Black;
             cmbCategoria.FormattingEnabled = true;
             cmbCategoria.Items.AddRange(new object[] { "Entrada", "Plato fuerte", "Postre", "Bebida" });
-            cmbCategoria.Location = new Point(46, 244);
+            cmbCategoria.Location = new Point(55, 261);
             cmbCategoria.Name = "cmbCategoria";
             cmbCategoria.Size = new Size(262, 25);
             cmbCategoria.TabIndex = 3;
@@ -238,7 +185,7 @@
             // CategoriaTxt
             // 
             CategoriaTxt.Image = Properties.Resources.CategoriaTxt;
-            CategoriaTxt.Location = new Point(3, 195);
+            CategoriaTxt.Location = new Point(12, 212);
             CategoriaTxt.Name = "CategoriaTxt";
             CategoriaTxt.Size = new Size(217, 63);
             CategoriaTxt.SizeMode = PictureBoxSizeMode.Zoom;
@@ -248,7 +195,7 @@
             // PrecioTxt
             // 
             PrecioTxt.Image = Properties.Resources.PrecioTxt;
-            PrecioTxt.Location = new Point(-9, 104);
+            PrecioTxt.Location = new Point(0, 121);
             PrecioTxt.Name = "PrecioTxt";
             PrecioTxt.Size = new Size(198, 42);
             PrecioTxt.SizeMode = PictureBoxSizeMode.Zoom;
@@ -262,7 +209,7 @@
             txtNombre.Cursor = Cursors.IBeam;
             txtNombre.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNombre.ForeColor = Color.Black;
-            txtNombre.Location = new Point(46, 51);
+            txtNombre.Location = new Point(55, 68);
             txtNombre.Multiline = true;
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(262, 38);
@@ -271,7 +218,7 @@
             // NombreTxt
             // 
             NombreTxt.Image = Properties.Resources.NombreTxt;
-            NombreTxt.Location = new Point(3, 3);
+            NombreTxt.Location = new Point(12, 20);
             NombreTxt.Name = "NombreTxt";
             NombreTxt.Size = new Size(189, 61);
             NombreTxt.SizeMode = PictureBoxSizeMode.Zoom;
@@ -286,12 +233,13 @@
             btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEditar.ForeColor = Color.White;
-            btnEditar.Location = new Point(808, 632);
+            btnEditar.Location = new Point(820, 560);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(172, 27);
+            btnEditar.Size = new Size(172, 46);
             btnEditar.TabIndex = 11;
             btnEditar.Text = "EDITAR";
             btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnGuardar
             // 
@@ -300,9 +248,9 @@
             btnGuardar.FlatStyle = FlatStyle.Flat;
             btnGuardar.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnGuardar.ForeColor = Color.White;
-            btnGuardar.Location = new Point(986, 632);
+            btnGuardar.Location = new Point(998, 560);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(172, 27);
+            btnGuardar.Size = new Size(172, 46);
             btnGuardar.TabIndex = 12;
             btnGuardar.Text = "GUARDAR";
             btnGuardar.UseVisualStyleBackColor = false;
@@ -314,9 +262,9 @@
             btnEliminar.FlatStyle = FlatStyle.Flat;
             btnEliminar.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEliminar.ForeColor = Color.White;
-            btnEliminar.Location = new Point(1164, 632);
+            btnEliminar.Location = new Point(1176, 560);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(172, 27);
+            btnEliminar.Size = new Size(172, 46);
             btnEliminar.TabIndex = 13;
             btnEliminar.Text = "ELIMINAR";
             btnEliminar.UseVisualStyleBackColor = false;
@@ -344,9 +292,46 @@
             dgvPlatos.Name = "dgvPlatos";
             dgvPlatos.ReadOnly = true;
             dgvPlatos.RowHeadersVisible = false;
+            dgvPlatos.RowTemplate.Height = 45;
             dgvPlatos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvPlatos.Size = new Size(785, 535);
             dgvPlatos.TabIndex = 14;
+            // 
+            // ColumnaNombre
+            // 
+            ColumnaNombre.DataPropertyName = "Nombre";
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            ColumnaNombre.DefaultCellStyle = dataGridViewCellStyle2;
+            ColumnaNombre.HeaderText = "NOMBRE";
+            ColumnaNombre.Name = "ColumnaNombre";
+            ColumnaNombre.ReadOnly = true;
+            // 
+            // ColumnaPrecio
+            // 
+            ColumnaPrecio.DataPropertyName = "Precio";
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            ColumnaPrecio.DefaultCellStyle = dataGridViewCellStyle3;
+            ColumnaPrecio.HeaderText = "PRECIO";
+            ColumnaPrecio.Name = "ColumnaPrecio";
+            ColumnaPrecio.ReadOnly = true;
+            // 
+            // ColumnaCategoría
+            // 
+            ColumnaCategoría.DataPropertyName = "Categoria";
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            ColumnaCategoría.DefaultCellStyle = dataGridViewCellStyle4;
+            ColumnaCategoría.HeaderText = "CATEGORIA";
+            ColumnaCategoría.Name = "ColumnaCategoría";
+            ColumnaCategoría.ReadOnly = true;
+            // 
+            // ColumnaDescripción
+            // 
+            ColumnaDescripción.DataPropertyName = "Descripcion";
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleRight;
+            ColumnaDescripción.DefaultCellStyle = dataGridViewCellStyle5;
+            ColumnaDescripción.HeaderText = "DESCRIPCION";
+            ColumnaDescripción.Name = "ColumnaDescripción";
+            ColumnaDescripción.ReadOnly = true;
             // 
             // textoenelmenu
             // 
@@ -391,34 +376,6 @@
             pictureBox1.TabIndex = 18;
             pictureBox1.TabStop = false;
             // 
-            // ColumnaNombre
-            // 
-            ColumnaNombre.DataPropertyName = "Nombre";
-            ColumnaNombre.HeaderText = "NOMBRE";
-            ColumnaNombre.Name = "ColumnaNombre";
-            ColumnaNombre.ReadOnly = true;
-            // 
-            // ColumnaPrecio
-            // 
-            ColumnaPrecio.DataPropertyName = "Precio";
-            ColumnaPrecio.HeaderText = "PRECIO";
-            ColumnaPrecio.Name = "ColumnaPrecio";
-            ColumnaPrecio.ReadOnly = true;
-            // 
-            // ColumnaCategoría
-            // 
-            ColumnaCategoría.DataPropertyName = "Categoria";
-            ColumnaCategoría.HeaderText = "CATEGORIA";
-            ColumnaCategoría.Name = "ColumnaCategoría";
-            ColumnaCategoría.ReadOnly = true;
-            // 
-            // ColumnaDescripción
-            // 
-            ColumnaDescripción.DataPropertyName = "Descripcion";
-            ColumnaDescripción.HeaderText = "DESCRIPCION";
-            ColumnaDescripción.Name = "ColumnaDescripción";
-            ColumnaDescripción.ReadOnly = true;
-            // 
             // FormMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -445,9 +402,6 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dolarimg).EndInit();
-            ((System.ComponentModel.ISupportInitialize)ReferenciaImg).EndInit();
-            ((System.ComponentModel.ISupportInitialize)CamaraImg).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)DescripcionTxt).EndInit();
             ((System.ComponentModel.ISupportInitialize)CategoriaTxt).EndInit();
             ((System.ComponentModel.ISupportInitialize)PrecioTxt).EndInit();
@@ -469,14 +423,10 @@
         private ComboBox cmbCategoria;
         private TextBox txtPrecio;
         private TextBox txIngredientes;
-        private PictureBox ReferenciaImg;
         private PictureBox PrecioTxt;
         private PictureBox NombreTxt;
         private PictureBox DescripcionTxt;
         private PictureBox CategoriaTxt;
-        private PictureBox pictureBox2;
-        private Button btnSubirFoto;
-        private PictureBox CamaraImg;
         private PictureBox dolarimg;
         private Button btnEditar;
         private Button btnGuardar;
