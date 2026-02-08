@@ -37,16 +37,16 @@
             salirbtn = new Button();
             OrdenesImg = new PictureBox();
             SalirImg = new PictureBox();
-            MesaImg = new PictureBox();
             MenuImg = new PictureBox();
             CajaImg = new PictureBox();
+            mesasimg = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)LOGO).BeginInit();
             ((System.ComponentModel.ISupportInitialize)LOGOTIPO).BeginInit();
             ((System.ComponentModel.ISupportInitialize)OrdenesImg).BeginInit();
             ((System.ComponentModel.ISupportInitialize)SalirImg).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)MesaImg).BeginInit();
             ((System.ComponentModel.ISupportInitialize)MenuImg).BeginInit();
             ((System.ComponentModel.ISupportInitialize)CajaImg).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)mesasimg).BeginInit();
             SuspendLayout();
             // 
             // LOGO
@@ -106,6 +106,7 @@
             mesasbtn.TabIndex = 3;
             mesasbtn.Text = "MESAS";
             mesasbtn.UseVisualStyleBackColor = true;
+            mesasbtn.Click += mesasbtn_Click;
             // 
             // cajabtn
             // 
@@ -179,16 +180,6 @@
             SalirImg.TabIndex = 11;
             SalirImg.TabStop = false;
             // 
-            // MesaImg
-            // 
-            MesaImg.Image = Properties.Resources.mesas;
-            MesaImg.Location = new Point(358, 500);
-            MesaImg.Name = "MesaImg";
-            MesaImg.Size = new Size(102, 111);
-            MesaImg.SizeMode = PictureBoxSizeMode.Zoom;
-            MesaImg.TabIndex = 12;
-            MesaImg.TabStop = false;
-            // 
             // MenuImg
             // 
             MenuImg.Image = Properties.Resources.menu;
@@ -209,6 +200,16 @@
             CajaImg.TabIndex = 14;
             CajaImg.TabStop = false;
             // 
+            // mesasimg
+            // 
+            mesasimg.Image = Properties.Resources.mesadisponibleImg;
+            mesasimg.Location = new Point(358, 500);
+            mesasimg.Name = "mesasimg";
+            mesasimg.Size = new Size(89, 82);
+            mesasimg.SizeMode = PictureBoxSizeMode.Zoom;
+            mesasimg.TabIndex = 15;
+            mesasimg.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -223,10 +224,10 @@
             Controls.Add(LOGOTIPO);
             Controls.Add(SalirImg);
             Controls.Add(MenuImg);
-            Controls.Add(MesaImg);
             Controls.Add(CajaImg);
             Controls.Add(LOGO);
             Controls.Add(OrdenesImg);
+            Controls.Add(mesasimg);
             ForeColor = SystemColors.ControlLightLight;
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "Form1";
@@ -235,9 +236,9 @@
             ((System.ComponentModel.ISupportInitialize)LOGOTIPO).EndInit();
             ((System.ComponentModel.ISupportInitialize)OrdenesImg).EndInit();
             ((System.ComponentModel.ISupportInitialize)SalirImg).EndInit();
-            ((System.ComponentModel.ISupportInitialize)MesaImg).EndInit();
             ((System.ComponentModel.ISupportInitialize)MenuImg).EndInit();
             ((System.ComponentModel.ISupportInitialize)CajaImg).EndInit();
+            ((System.ComponentModel.ISupportInitialize)mesasimg).EndInit();
             ResumeLayout(false);
         }
 
@@ -252,8 +253,8 @@
         private Button salirbtn;
         private PictureBox OrdenesImg;
         private PictureBox SalirImg;
-        private PictureBox MesaImg;
         private PictureBox MenuImg;
         private PictureBox CajaImg;
+        private PictureBox mesasimg;
     }
 }
