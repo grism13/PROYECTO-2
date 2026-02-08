@@ -29,16 +29,16 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Menu
             // --- 2. CREACIÓN DE LOS OBJETOS (LOS PLATOS) ---
 
             // Plato 1: El Fuerte
-            Plato p1 = new Plato("Linguinis con langostinos", 15m, "Plato fuerte", "Pasta al dente coronada con langostinos frescos salteados.", null);
+            Plato p1 = new Plato("Linguinis con langostinos", 15m, "Plato fuerte", "Pasta al dente bañada en una suave salsa de vino blanco y ajo, coronada con langostinos frescos salteados.", null);
 
             // Plato 2: La Entrada
-            Plato p2 = new Plato("Degustación de mejillones", 12m, "Entrada", "Selección de mejillones frescos.", null);
+            Plato p2 = new Plato("Degustación de mejillones", 12m, "Entrada", "Selección de mejillones frescos preparados con la receta especial de la casa, toques cítricos y especias.", null);
 
             // Plato 3: El Postre
-            Plato p3 = new Plato("Quesillo", 4m, "Postre", "El clásico postre venezolano.", null);
+            Plato p3 = new Plato("Quesillo", 4m, "Postre", "El clásico postre venezolano: cremoso, suave y bañado en su inconfundible caramelo oscuro artesanal.", null);
 
             // Plato 4: La Bebida
-            Plato p4 = new Plato("Jugo de Parchita", 3m, "Bebida", "Bebida natural concentrada", null);
+            Plato p4 = new Plato("Jugo de Parchita", 3m, "Bebida", "Bebida natural concentrada, dulce y refrescante, servida con abundante hielo para el calor.", null);
 
             // --- 3. GUARDADO EN LA LISTA (MEMORIA) ---
             listaPlatos.Add(p1);
@@ -50,7 +50,7 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Menu
             dgvPlatos.DataSource = null;        // Limpiamos la conexión anterior
             dgvPlatos.DataSource = listaPlatos; // Conectamos la lista nueva
 
-
+           
         }
         private void EstilizarTabla()
         {
@@ -80,11 +80,10 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Menu
         }
 
 
-        
-
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void btnSubirFoto_Click(object sender, EventArgs e)
         {
 
         }
+
     }
 }

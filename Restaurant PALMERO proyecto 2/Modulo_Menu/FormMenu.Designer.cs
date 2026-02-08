@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             MenuImg = new PictureBox();
             MenuTxt = new PictureBox();
             panel1 = new Panel();
@@ -99,9 +95,9 @@
             panel1.BackColor = Color.FromArgb(192, 192, 255);
             panel1.BackgroundImage = Properties.Resources.logo_completo;
             panel1.Controls.Add(panel2);
-            panel1.Location = new Point(873, 28);
+            panel1.Location = new Point(870, 46);
             panel1.Name = "panel1";
-            panel1.Size = new Size(396, 507);
+            panel1.Size = new Size(396, 501);
             panel1.TabIndex = 2;
             // 
             // panel2
@@ -116,9 +112,9 @@
             panel2.Controls.Add(PrecioTxt);
             panel2.Controls.Add(txtNombre);
             panel2.Controls.Add(NombreTxt);
-            panel2.Location = new Point(18, 21);
+            panel2.Location = new Point(21, 16);
             panel2.Name = "panel2";
-            panel2.Size = new Size(362, 469);
+            panel2.Size = new Size(362, 466);
             panel2.TabIndex = 3;
             // 
             // txtPrecio
@@ -128,7 +124,7 @@
             txtPrecio.Cursor = Cursors.IBeam;
             txtPrecio.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtPrecio.ForeColor = Color.Black;
-            txtPrecio.Location = new Point(55, 158);
+            txtPrecio.Location = new Point(46, 166);
             txtPrecio.Multiline = true;
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(212, 39);
@@ -138,7 +134,7 @@
             // 
             dolarimg.BackColor = Color.Transparent;
             dolarimg.Image = Properties.Resources.DolarImg;
-            dolarimg.Location = new Point(245, 149);
+            dolarimg.Location = new Point(236, 157);
             dolarimg.Name = "dolarimg";
             dolarimg.Size = new Size(81, 57);
             dolarimg.SizeMode = PictureBoxSizeMode.Zoom;
@@ -152,7 +148,7 @@
             txIngredientes.Cursor = Cursors.IBeam;
             txIngredientes.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txIngredientes.ForeColor = Color.Black;
-            txIngredientes.Location = new Point(55, 354);
+            txIngredientes.Location = new Point(46, 362);
             txIngredientes.Multiline = true;
             txIngredientes.Name = "txIngredientes";
             txIngredientes.Size = new Size(262, 78);
@@ -161,7 +157,7 @@
             // DescripcionTxt
             // 
             DescripcionTxt.Image = Properties.Resources.DescripcionTxt;
-            DescripcionTxt.Location = new Point(26, 304);
+            DescripcionTxt.Location = new Point(17, 312);
             DescripcionTxt.Name = "DescripcionTxt";
             DescripcionTxt.Size = new Size(203, 69);
             DescripcionTxt.SizeMode = PictureBoxSizeMode.Zoom;
@@ -177,7 +173,7 @@
             cmbCategoria.ForeColor = Color.Black;
             cmbCategoria.FormattingEnabled = true;
             cmbCategoria.Items.AddRange(new object[] { "Entrada", "Plato fuerte", "Postre", "Bebida" });
-            cmbCategoria.Location = new Point(55, 261);
+            cmbCategoria.Location = new Point(46, 269);
             cmbCategoria.Name = "cmbCategoria";
             cmbCategoria.Size = new Size(262, 25);
             cmbCategoria.TabIndex = 3;
@@ -185,7 +181,7 @@
             // CategoriaTxt
             // 
             CategoriaTxt.Image = Properties.Resources.CategoriaTxt;
-            CategoriaTxt.Location = new Point(12, 212);
+            CategoriaTxt.Location = new Point(3, 220);
             CategoriaTxt.Name = "CategoriaTxt";
             CategoriaTxt.Size = new Size(217, 63);
             CategoriaTxt.SizeMode = PictureBoxSizeMode.Zoom;
@@ -195,7 +191,7 @@
             // PrecioTxt
             // 
             PrecioTxt.Image = Properties.Resources.PrecioTxt;
-            PrecioTxt.Location = new Point(0, 121);
+            PrecioTxt.Location = new Point(-9, 129);
             PrecioTxt.Name = "PrecioTxt";
             PrecioTxt.Size = new Size(198, 42);
             PrecioTxt.SizeMode = PictureBoxSizeMode.Zoom;
@@ -209,7 +205,7 @@
             txtNombre.Cursor = Cursors.IBeam;
             txtNombre.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtNombre.ForeColor = Color.Black;
-            txtNombre.Location = new Point(55, 68);
+            txtNombre.Location = new Point(46, 76);
             txtNombre.Multiline = true;
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(262, 38);
@@ -218,7 +214,7 @@
             // NombreTxt
             // 
             NombreTxt.Image = Properties.Resources.NombreTxt;
-            NombreTxt.Location = new Point(12, 20);
+            NombreTxt.Location = new Point(3, 28);
             NombreTxt.Name = "NombreTxt";
             NombreTxt.Size = new Size(189, 61);
             NombreTxt.SizeMode = PictureBoxSizeMode.Zoom;
@@ -233,13 +229,12 @@
             btnEditar.FlatStyle = FlatStyle.Flat;
             btnEditar.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEditar.ForeColor = Color.White;
-            btnEditar.Location = new Point(820, 560);
+            btnEditar.Location = new Point(808, 568);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(172, 46);
+            btnEditar.Size = new Size(172, 55);
             btnEditar.TabIndex = 11;
             btnEditar.Text = "EDITAR";
             btnEditar.UseVisualStyleBackColor = false;
-            btnEditar.Click += btnEditar_Click;
             // 
             // btnGuardar
             // 
@@ -248,9 +243,9 @@
             btnGuardar.FlatStyle = FlatStyle.Flat;
             btnGuardar.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnGuardar.ForeColor = Color.White;
-            btnGuardar.Location = new Point(998, 560);
+            btnGuardar.Location = new Point(986, 568);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(172, 46);
+            btnGuardar.Size = new Size(172, 55);
             btnGuardar.TabIndex = 12;
             btnGuardar.Text = "GUARDAR";
             btnGuardar.UseVisualStyleBackColor = false;
@@ -262,9 +257,9 @@
             btnEliminar.FlatStyle = FlatStyle.Flat;
             btnEliminar.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEliminar.ForeColor = Color.White;
-            btnEliminar.Location = new Point(1176, 560);
+            btnEliminar.Location = new Point(1164, 568);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(172, 46);
+            btnEliminar.Size = new Size(172, 55);
             btnEliminar.TabIndex = 13;
             btnEliminar.Text = "ELIMINAR";
             btnEliminar.UseVisualStyleBackColor = false;
@@ -292,6 +287,7 @@
             dgvPlatos.Name = "dgvPlatos";
             dgvPlatos.ReadOnly = true;
             dgvPlatos.RowHeadersVisible = false;
+            dgvPlatos.RowTemplate.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvPlatos.RowTemplate.Height = 45;
             dgvPlatos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvPlatos.Size = new Size(785, 535);
@@ -300,8 +296,6 @@
             // ColumnaNombre
             // 
             ColumnaNombre.DataPropertyName = "Nombre";
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            ColumnaNombre.DefaultCellStyle = dataGridViewCellStyle2;
             ColumnaNombre.HeaderText = "NOMBRE";
             ColumnaNombre.Name = "ColumnaNombre";
             ColumnaNombre.ReadOnly = true;
@@ -309,8 +303,6 @@
             // ColumnaPrecio
             // 
             ColumnaPrecio.DataPropertyName = "Precio";
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            ColumnaPrecio.DefaultCellStyle = dataGridViewCellStyle3;
             ColumnaPrecio.HeaderText = "PRECIO";
             ColumnaPrecio.Name = "ColumnaPrecio";
             ColumnaPrecio.ReadOnly = true;
@@ -318,8 +310,6 @@
             // ColumnaCategoría
             // 
             ColumnaCategoría.DataPropertyName = "Categoria";
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            ColumnaCategoría.DefaultCellStyle = dataGridViewCellStyle4;
             ColumnaCategoría.HeaderText = "CATEGORIA";
             ColumnaCategoría.Name = "ColumnaCategoría";
             ColumnaCategoría.ReadOnly = true;
@@ -327,8 +317,6 @@
             // ColumnaDescripción
             // 
             ColumnaDescripción.DataPropertyName = "Descripcion";
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleRight;
-            ColumnaDescripción.DefaultCellStyle = dataGridViewCellStyle5;
             ColumnaDescripción.HeaderText = "DESCRIPCION";
             ColumnaDescripción.Name = "ColumnaDescripción";
             ColumnaDescripción.ReadOnly = true;

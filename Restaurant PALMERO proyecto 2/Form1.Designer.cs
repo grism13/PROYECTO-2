@@ -53,7 +53,7 @@
             // 
             LOGO.BackColor = Color.Transparent;
             LOGO.Image = Properties.Resources.logo_palmero_solo_texto_sin_fondo;
-            LOGO.Location = new Point(163, 101);
+            LOGO.Location = new Point(137, 101);
             LOGO.Name = "LOGO";
             LOGO.Size = new Size(1088, 326);
             LOGO.SizeMode = PictureBoxSizeMode.Zoom;
@@ -64,7 +64,7 @@
             // 
             LOGOTIPO.BackColor = Color.Transparent;
             LOGOTIPO.Image = Properties.Resources.logo_website_icon_2;
-            LOGOTIPO.Location = new Point(626, 78);
+            LOGOTIPO.Location = new Point(600, 78);
             LOGOTIPO.Name = "LOGOTIPO";
             LOGOTIPO.Size = new Size(180, 130);
             LOGOTIPO.SizeMode = PictureBoxSizeMode.Zoom;
@@ -82,7 +82,7 @@
             menubtn.FlatStyle = FlatStyle.Flat;
             menubtn.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             menubtn.ForeColor = Color.White;
-            menubtn.Location = new Point(469, 448);
+            menubtn.Location = new Point(443, 448);
             menubtn.Name = "menubtn";
             menubtn.Size = new Size(234, 46);
             menubtn.TabIndex = 2;
@@ -100,7 +100,7 @@
             mesasbtn.FlatStyle = FlatStyle.Flat;
             mesasbtn.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             mesasbtn.ForeColor = Color.White;
-            mesasbtn.Location = new Point(469, 527);
+            mesasbtn.Location = new Point(443, 527);
             mesasbtn.Name = "mesasbtn";
             mesasbtn.Size = new Size(234, 44);
             mesasbtn.TabIndex = 3;
@@ -117,7 +117,7 @@
             cajabtn.FlatStyle = FlatStyle.Flat;
             cajabtn.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cajabtn.ForeColor = Color.White;
-            cajabtn.Location = new Point(815, 448);
+            cajabtn.Location = new Point(789, 448);
             cajabtn.Name = "cajabtn";
             cajabtn.Size = new Size(234, 46);
             cajabtn.TabIndex = 7;
@@ -134,7 +134,7 @@
             ordenesbtn.FlatStyle = FlatStyle.Flat;
             ordenesbtn.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ordenesbtn.ForeColor = Color.White;
-            ordenesbtn.Location = new Point(815, 527);
+            ordenesbtn.Location = new Point(789, 527);
             ordenesbtn.Name = "ordenesbtn";
             ordenesbtn.Size = new Size(234, 44);
             ordenesbtn.TabIndex = 6;
@@ -162,7 +162,7 @@
             // OrdenesImg
             // 
             OrdenesImg.Image = Properties.Resources.ordenes;
-            OrdenesImg.Location = new Point(723, 500);
+            OrdenesImg.Location = new Point(697, 500);
             OrdenesImg.Name = "OrdenesImg";
             OrdenesImg.Size = new Size(99, 111);
             OrdenesImg.SizeMode = PictureBoxSizeMode.Zoom;
@@ -182,7 +182,7 @@
             // MesaImg
             // 
             MesaImg.Image = Properties.Resources.mesas;
-            MesaImg.Location = new Point(384, 500);
+            MesaImg.Location = new Point(358, 500);
             MesaImg.Name = "MesaImg";
             MesaImg.Size = new Size(102, 111);
             MesaImg.SizeMode = PictureBoxSizeMode.Zoom;
@@ -192,7 +192,7 @@
             // MenuImg
             // 
             MenuImg.Image = Properties.Resources.menu;
-            MenuImg.Location = new Point(384, 410);
+            MenuImg.Location = new Point(358, 410);
             MenuImg.Name = "MenuImg";
             MenuImg.Size = new Size(102, 111);
             MenuImg.SizeMode = PictureBoxSizeMode.Zoom;
@@ -202,7 +202,7 @@
             // CajaImg
             // 
             CajaImg.Image = Properties.Resources.caja;
-            CajaImg.Location = new Point(723, 410);
+            CajaImg.Location = new Point(697, 410);
             CajaImg.Name = "CajaImg";
             CajaImg.Size = new Size(99, 111);
             CajaImg.SizeMode = PictureBoxSizeMode.Zoom;
