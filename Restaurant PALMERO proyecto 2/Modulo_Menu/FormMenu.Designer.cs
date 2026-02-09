@@ -35,7 +35,7 @@
             panel2 = new Panel();
             txtPrecio = new TextBox();
             dolarimg = new PictureBox();
-            txIngredientes = new TextBox();
+            txtDescripcion = new TextBox();
             DescripcionTxt = new PictureBox();
             cmbCategoria = new ComboBox();
             CategoriaTxt = new PictureBox();
@@ -54,6 +54,7 @@
             txtBuscar = new TextBox();
             LupaImg = new PictureBox();
             pictureBox1 = new PictureBox();
+            btnLimpiar = new Button();
             ((System.ComponentModel.ISupportInitialize)MenuImg).BeginInit();
             ((System.ComponentModel.ISupportInitialize)MenuTxt).BeginInit();
             panel1.SuspendLayout();
@@ -105,7 +106,7 @@
             panel2.BackColor = Color.White;
             panel2.Controls.Add(txtPrecio);
             panel2.Controls.Add(dolarimg);
-            panel2.Controls.Add(txIngredientes);
+            panel2.Controls.Add(txtDescripcion);
             panel2.Controls.Add(DescripcionTxt);
             panel2.Controls.Add(cmbCategoria);
             panel2.Controls.Add(CategoriaTxt);
@@ -141,18 +142,18 @@
             dolarimg.TabIndex = 3;
             dolarimg.TabStop = false;
             // 
-            // txIngredientes
+            // txtDescripcion
             // 
-            txIngredientes.BackColor = Color.White;
-            txIngredientes.BorderStyle = BorderStyle.FixedSingle;
-            txIngredientes.Cursor = Cursors.IBeam;
-            txIngredientes.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txIngredientes.ForeColor = Color.Black;
-            txIngredientes.Location = new Point(46, 362);
-            txIngredientes.Multiline = true;
-            txIngredientes.Name = "txIngredientes";
-            txIngredientes.Size = new Size(262, 78);
-            txIngredientes.TabIndex = 5;
+            txtDescripcion.BackColor = Color.White;
+            txtDescripcion.BorderStyle = BorderStyle.FixedSingle;
+            txtDescripcion.Cursor = Cursors.IBeam;
+            txtDescripcion.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtDescripcion.ForeColor = Color.Black;
+            txtDescripcion.Location = new Point(46, 362);
+            txtDescripcion.Multiline = true;
+            txtDescripcion.Name = "txtDescripcion";
+            txtDescripcion.Size = new Size(262, 78);
+            txtDescripcion.TabIndex = 5;
             // 
             // DescripcionTxt
             // 
@@ -235,6 +236,7 @@
             btnEditar.TabIndex = 11;
             btnEditar.Text = "EDITAR";
             btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnGuardar
             // 
@@ -249,6 +251,7 @@
             btnGuardar.TabIndex = 12;
             btnGuardar.Text = "GUARDAR";
             btnGuardar.UseVisualStyleBackColor = false;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // btnEliminar
             // 
@@ -263,6 +266,7 @@
             btnEliminar.TabIndex = 13;
             btnEliminar.Text = "ELIMINAR";
             btnEliminar.UseVisualStyleBackColor = false;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // dgvPlatos
             // 
@@ -292,6 +296,7 @@
             dgvPlatos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvPlatos.Size = new Size(785, 535);
             dgvPlatos.TabIndex = 14;
+            dgvPlatos.CellContentClick += dgvPlatos_CellContentClick;
             // 
             // ColumnaNombre
             // 
@@ -364,12 +369,23 @@
             pictureBox1.TabIndex = 18;
             pictureBox1.TabStop = false;
             // 
+            // btnLimpiar
+            // 
+            btnLimpiar.Location = new Point(780, 524);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new Size(75, 23);
+            btnLimpiar.TabIndex = 19;
+            btnLimpiar.Text = "Limpiar";
+            btnLimpiar.UseVisualStyleBackColor = true;
+            btnLimpiar.Click += button1_Click;
+            // 
             // FormMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1348, 671);
+            Controls.Add(btnLimpiar);
             Controls.Add(txtBuscar);
             Controls.Add(textoenelmenu);
             Controls.Add(dgvPlatos);
@@ -410,7 +426,7 @@
         private TextBox txtNombre;
         private ComboBox cmbCategoria;
         private TextBox txtPrecio;
-        private TextBox txIngredientes;
+        private TextBox txtDescripcion;
         private PictureBox PrecioTxt;
         private PictureBox NombreTxt;
         private PictureBox DescripcionTxt;
@@ -428,5 +444,6 @@
         private DataGridViewTextBoxColumn ColumnaPrecio;
         private DataGridViewTextBoxColumn ColumnaCategoría;
         private DataGridViewTextBoxColumn ColumnaDescripción;
+        private Button btnLimpiar;
     }
 }
