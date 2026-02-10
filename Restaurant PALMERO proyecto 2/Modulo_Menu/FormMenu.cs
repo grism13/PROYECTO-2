@@ -14,7 +14,8 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Menu
 {
     public partial class FormMenu : Form
     {
-        List<Plato> listaPlatos = new List<Plato>();
+
+        public static List<Plato> listaPlatos = new List<Plato>();
         public FormMenu()
         {
             InitializeComponent();
