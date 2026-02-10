@@ -28,10 +28,10 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Ordenes
         {
             // OJO ELIEZER: Aquí creamos platos falsos para que pruebes YA.
             // Cuando Gris te pase su base de datos, borras esto y conectas lo de ella.
-            listaDePlatos.Add(new Plato("Linguinis con langostinos", 15, "Carne", "Brutal", null));
-            listaDePlatos.Add(new Plato("Degustación de mejillones", 12, "Pasta", "Ricos", null));
-            listaDePlatos.Add(new Plato("Quesillo", 4, "Bebida", "Fresco", null));
-            listaDePlatos.Add(new Plato("Jugo de Parchita", 3, "Pizza", "Grande", null));
+            listaDePlatos.Add(new Plato("Hamburguesa Palmero", 15, "Carne", "Brutal"));
+            listaDePlatos.Add(new Plato("Linguinis Especiales", 12, "Pasta", "Ricos"));
+            listaDePlatos.Add(new Plato("Jugo Natural", 5, "Bebida", "Fresco"));
+            listaDePlatos.Add(new Plato("Pizza Familiar", 20, "Pizza", "Grande"));
 
             // Metemos los platos al ComboBox
             cmbPlatos.DataSource = listaDePlatos;

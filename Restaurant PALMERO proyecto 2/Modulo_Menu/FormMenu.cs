@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic; 
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -32,22 +32,24 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Menu
             // --- 2. CREACIÓN DE LOS OBJETOS (LOS PLATOS) ---
 
             // Plato 1: El Fuerte
-            Plato p1 = new Plato("Linguinis con langostinos", 15m, "Plato fuerte", "Pasta al dente bañada en una suave salsa de vino blanco y ajo, coronada con langostinos frescos salteados.", null);
+            Plato p1 = new Plato("Linguinis con langostinos", 15m, "Plato fuerte", "Pasta al dente bañada en una suave salsa de vino blanco y ajo, coronada con langostinos frescos salteados.");
 
             // Plato 2: La Entrada
-            Plato p2 = new Plato("Degustación de mejillones", 12m, "Entrada", "Selección de mejillones frescos preparados con la receta especial de la casa, toques cítricos y especias.", null);
+            Plato p2 = new Plato("Degustación de mejillones", 12m, "Entrada", "Selección de mejillones frescos preparados con la receta especial de la casa, toques cítricos y especias.");
 
             // Plato 3: El Postre
-            Plato p3 = new Plato("Quesillo", 4m, "Postre", "El clásico postre venezolano: cremoso, suave y bañado en su inconfundible caramelo oscuro artesanal.", null);
+            Plato p3 = new Plato("Quesillo", 4m, "Postre", "El clásico postre venezolano: cremoso, suave y bañado en su inconfundible caramelo oscuro artesanal.");
 
             // Plato 4: La Bebida
-            Plato p4 = new Plato("Jugo de Parchita", 3m, "Bebida", "Bebida natural concentrada, dulce y refrescante, servida con abundante hielo para el calor.", null);
+            Plato p4 = new Plato("Jugo de Parchita", 3m, "Bebida", "Bebida natural concentrada, dulce y refrescante, servida con abundante hielo para el calor.");
 
             // --- 3. GUARDADO EN LA LISTA (MEMORIA) ---
             listaPlatos.Add(p1);
             listaPlatos.Add(p2);
             listaPlatos.Add(p3);
             listaPlatos.Add(p4);
+
+            listaPlatos = listaPlatos.OrderBy(x => x.Categoria).ThenBy(x => x.Nombre).ToList();
 
             // --- 4. MOSTRAR EN PANTALLA ---
             dgvPlatos.DataSource = null;        // Limpiamos la conexión anterior
@@ -86,38 +88,52 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Menu
         private void btnGuardar_Click(object sender, EventArgs e)
         {
 
-            // --- : VALIDACIÓN DEL PRECIO ---
-            decimal precio; // Creamos la variable vacía
-
-            
+            // 1. VALIDAR PRECIO (Esto ya lo tenías)
+            decimal precio;
             if (!decimal.TryParse(txtPrecio.Text, out precio))
             {
-                MessageBox.Show("¡Error! En el precio solo puedes poner números.", "Cuidado");
-                return; // SE DETIENE AQUÍ. No intenta guardar nada.
+                MessageBox.Show("El precio debe ser un número.", "Error");
+                return;
             }
 
-            // ---: SI LLEGAMOS AQUÍ, EL PRECIO ESTÁ BIEN ---
+
+
+            // "Busca si existe ALGÚN (Any) plato cuyo nombre sea igual al que escribí"
+            bool existe = listaPlatos.Any(x => x.Nombre.ToLower() == txtNombre.Text.ToLower());
+
+            if (existe == true)
+            {
+                MessageBox.Show("¡Cuidado! Ya existe un plato con ese nombre.", "Duplicado");
+                return; // SE DETIENE AQUÍ. No guarda nada.
+            }
+            // ---------------------------------------------------------
+
+            // 2. CREAR EL PLATO (Si pasó el filtro anterior)
             string nombre = txtNombre.Text;
             string categoria = cmbCategoria.Text;
             string descripcion = txtDescripcion.Text;
 
-            // ---  CREAR Y GUARDAR ---
-            
-            Plato nuevoPlato = new Plato(nombre, precio, categoria, descripcion, null);
+            Plato nuevoPlato = new Plato(nombre, precio, categoria, descripcion);
 
+            // 3. GUARDAR Y REFRESCAR
             listaPlatos.Add(nuevoPlato);
 
-            // Refrescar tabla
+
+            // Esto agrupa las categorías (Ej. Todas las "Bebidas" juntas)
+            listaPlatos = listaPlatos.OrderBy(x => x.Categoria).ThenBy(x => x.Nombre).ToList();
+
+            // 4. REFRESCAR LA TABLA
             dgvPlatos.DataSource = null;
             dgvPlatos.DataSource = listaPlatos;
 
-            // Limpiar cajas
+
+            // 4. LIMPIAR
             txtNombre.Clear();
             txtPrecio.Clear();
             txtDescripcion.Clear();
             cmbCategoria.SelectedIndex = -1;
 
-            MessageBox.Show("¡Guardado correctamente!");
+            MessageBox.Show("¡Plato guardado!");
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -200,7 +216,7 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Menu
         {
             if (e.RowIndex >= 0)
             {
-                
+
                 // Agarrar el plato directamente de la fila (funciona perfecto con el buscador)
                 Plato platoSeleccionado = (Plato)dgvPlatos.Rows[e.RowIndex].DataBoundItem;
 
@@ -210,6 +226,24 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Menu
                 cmbCategoria.Text = platoSeleccionado.Categoria;
                 txtDescripcion.Text = platoSeleccionado.Descripcion;
             }
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            // 1. Guardamos lo que escribiste (y lo pasamos a minúsculas para que no importen las mayúsculas)
+            string busqueda = txtBuscar.Text.ToLower();
+
+            // 2. FILTRO MÁGICO (LINQ)
+            // "De la lista completa, fíltrame (Where) aquellos platos cuyo NOMBRE contenga lo que escribí
+            //  O (||) cuya CATEGORÍA contenga lo que escribí".
+            var listaFiltrada = listaPlatos.Where(x =>
+                                                  x.Nombre.ToLower().Contains(busqueda) ||
+                                                  x.Categoria.ToLower().Contains(busqueda)
+                                                  ).ToList();
+
+            // 3. Actualizamos la tabla visualmente
+            dgvPlatos.DataSource = null;
+            dgvPlatos.DataSource = listaFiltrada;
         }
     }
 }

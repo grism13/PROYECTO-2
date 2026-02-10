@@ -9,24 +9,22 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Menu // Se guardará en la misma 
 {
     public class Plato
     {
-        // 1. CARACTERÍSTICAS (Propiedades)
+        // 1. CARACTERÍSTICAS
         public string Nombre { get; set; }
         public decimal Precio { get; set; }
         public string Categoria { get; set; }
         public string Descripcion { get; set; }
-        public Image Foto { get; set; }
 
-        // 2. CONSTRUCTOR VACÍO (Para cuando creamos un plato sin datos)
+        // 2. CONSTRUCTOR VACÍO
         public Plato() { }
 
-        // 3. CONSTRUCTOR LLENO (Para crear los platos predeterminados rápido)
-        public Plato(string nombre, decimal precio, string categoria, string descripcion, Image foto)
+        // 3. CONSTRUCTOR (Solo 4 cosas: SIN FOTO)
+        public Plato(string nombre, decimal precio, string categoria, string descripcion)
         {
             Nombre = nombre;
             Precio = precio;
             Categoria = categoria;
             Descripcion = descripcion;
-            Foto = foto;
         }
     }
 }

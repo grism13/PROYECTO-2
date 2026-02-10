@@ -104,7 +104,6 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
-            panel2.Controls.Add(btnLimpiar);
             panel2.Controls.Add(txtPrecio);
             panel2.Controls.Add(dolarimg);
             panel2.Controls.Add(txtDescripcion);
@@ -349,6 +348,7 @@
             txtBuscar.Name = "txtBuscar";
             txtBuscar.Size = new Size(274, 25);
             txtBuscar.TabIndex = 16;
+            txtBuscar.TextChanged += txtBuscar_TextChanged;
             // 
             // LupaImg
             // 
@@ -372,16 +372,12 @@
             // 
             // btnLimpiar
             // 
-            btnLimpiar.BackColor = Color.LightSlateGray;
-            btnLimpiar.FlatStyle = FlatStyle.Flat;
-            btnLimpiar.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLimpiar.ForeColor = Color.White;
-            btnLimpiar.Location = new Point(273, 16);
+            btnLimpiar.Location = new Point(780, 524);
             btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(70, 23);
+            btnLimpiar.Size = new Size(75, 23);
             btnLimpiar.TabIndex = 19;
-            btnLimpiar.Text = "LIMPIAR";
-            btnLimpiar.UseVisualStyleBackColor = false;
+            btnLimpiar.Text = "Limpiar";
+            btnLimpiar.UseVisualStyleBackColor = true;
             btnLimpiar.Click += button1_Click;
             // 
             // FormMenu
@@ -390,6 +386,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1348, 671);
+            Controls.Add(btnLimpiar);
             Controls.Add(txtBuscar);
             Controls.Add(textoenelmenu);
             Controls.Add(dgvPlatos);
