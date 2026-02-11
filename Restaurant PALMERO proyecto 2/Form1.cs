@@ -8,14 +8,11 @@ namespace Restaurant_PALMERO_proyecto_2
     {
 
         //Aqui añado parte del codigo para guardar los platos en el sistema
-        //Se define una lista global de platos
+
         public static List<Plato> MenuGlobal = new List<Plato>();
 
-        // Aqui se ve el estado de las mesas (ocupada o no)
-        public static Dictionary<int, bool> MesaOcupada = new Dictionary<int, bool>();
+        //Aqui se añade parte de codigo para facturas
 
-        // Aqui pedidos de cada mesa
-        public static Dictionary<int, List<DetalleOrden>> PedidosEnMesa = new Dictionary<int, List<DetalleOrden>>();
 
         public Form1()
         {
@@ -70,15 +67,7 @@ namespace Restaurant_PALMERO_proyecto_2
 
             //Esto es para las mesas
 
-            if (PedidosEnMesa.Count == 0)
-            {
-                
-                for (int i = 1; i <= 5; i++)
-                {
-                    PedidosEnMesa.Add(i, new List<DetalleOrden>());
-                    MesaOcupada.Add(i, false);
-                }
-            }
+            
 
         }
 
