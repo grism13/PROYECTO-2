@@ -16,6 +16,7 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Mesas
             InitializeComponent();
         }
 
+        //Boton 1
         private void lblMesa1_Click(object sender, EventArgs e)
         {
             mesaActual = 1;
@@ -114,7 +115,7 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Mesas
 
         private void FormMesas_Load(object sender, EventArgs e)
         {
-            
+
             // Configuramos las columnas de la lista de pedidos
             dgvPedido.ColumnCount = 3;
             dgvPedido.Columns[0].Name = "Cant";
@@ -126,9 +127,12 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Mesas
             dgvPedido.Columns[2].Name = "Precio";
             dgvPedido.Columns[2].Width = 80;
         }
-    
 
-       
+        //Aqui es donde se agrega el plato (se obtiene de menuGlobal en form1)
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
