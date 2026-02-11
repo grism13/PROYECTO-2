@@ -29,33 +29,38 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCaja));
             cmbPlatos = new ComboBox();
             numCantidad = new NumericUpDown();
             contextMenuStrip1 = new ContextMenuStrip(components);
             btnAgregar = new Button();
-            dgvCaja = new DataGridView();
             label2 = new Label();
             label3 = new Label();
             lblTotal = new Label();
             btnCobrar = new Button();
+            CajaImg = new PictureBox();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)numCantidad).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dgvCaja).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)CajaImg).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // cmbPlatos
             // 
             cmbPlatos.FormattingEnabled = true;
-            cmbPlatos.Location = new Point(86, 112);
+            cmbPlatos.Location = new Point(985, 375);
+            cmbPlatos.Margin = new Padding(3, 2, 3, 2);
             cmbPlatos.Name = "cmbPlatos";
-            cmbPlatos.Size = new Size(151, 28);
+            cmbPlatos.Size = new Size(133, 23);
             cmbPlatos.TabIndex = 0;
             // 
             // numCantidad
             // 
-            numCantidad.Location = new Point(86, 279);
+            numCantidad.Location = new Point(1080, 307);
+            numCantidad.Margin = new Padding(3, 2, 3, 2);
             numCantidad.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numCantidad.Name = "numCantidad";
-            numCantidad.Size = new Size(150, 27);
+            numCantidad.Size = new Size(131, 23);
             numCantidad.TabIndex = 1;
             numCantidad.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
@@ -67,78 +72,95 @@
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(86, 384);
+            btnAgregar.Location = new Point(911, 244);
+            btnAgregar.Margin = new Padding(3, 2, 3, 2);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(140, 29);
+            btnAgregar.Size = new Size(122, 22);
             btnAgregar.TabIndex = 3;
             btnAgregar.Text = "AGREGAR";
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click_1;
             // 
-            // dgvCaja
-            // 
-            dgvCaja.BackgroundColor = Color.White;
-            dgvCaja.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCaja.Location = new Point(391, 188);
-            dgvCaja.Name = "dgvCaja";
-            dgvCaja.RowHeadersWidth = 51;
-            dgvCaja.Size = new Size(300, 188);
-            dgvCaja.TabIndex = 4;
-            // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(96, 73);
+            label2.Location = new Point(994, 346);
             label2.Name = "label2";
-            label2.Size = new Size(123, 20);
+            label2.Size = new Size(97, 15);
             label2.TabIndex = 7;
             label2.Text = "Plato disponibles";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(96, 238);
+            label3.Location = new Point(1089, 276);
             label3.Name = "label3";
-            label3.Size = new Size(129, 20);
+            label3.Size = new Size(101, 15);
             label3.TabIndex = 8;
             label3.Text = "Cantidad deseada";
             // 
             // lblTotal
             // 
             lblTotal.AutoSize = true;
-            lblTotal.Location = new Point(507, 147);
+            lblTotal.Location = new Point(1184, 232);
             lblTotal.Name = "lblTotal";
-            lblTotal.Size = new Size(65, 20);
+            lblTotal.Size = new Size(50, 15);
             lblTotal.TabIndex = 9;
             lblTotal.Text = "Total: $0";
             // 
             // btnCobrar
             // 
-            btnCobrar.Location = new Point(463, 411);
+            btnCobrar.Location = new Point(1145, 430);
+            btnCobrar.Margin = new Padding(3, 2, 3, 2);
             btnCobrar.Name = "btnCobrar";
-            btnCobrar.Size = new Size(140, 29);
+            btnCobrar.Size = new Size(122, 22);
             btnCobrar.TabIndex = 10;
             btnCobrar.Text = "COBRAR";
             btnCobrar.UseVisualStyleBackColor = true;
             btnCobrar.Click += btnCobrar_Click_1;
             // 
+            // CajaImg
+            // 
+            CajaImg.Image = Properties.Resources.caja;
+            CajaImg.Location = new Point(-18, -21);
+            CajaImg.Name = "CajaImg";
+            CajaImg.Size = new Size(197, 182);
+            CajaImg.SizeMode = PictureBoxSizeMode.Zoom;
+            CajaImg.TabIndex = 15;
+            CajaImg.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.CajaTxt;
+            pictureBox1.Location = new Point(132, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(213, 123);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 16;
+            pictureBox1.TabStop = false;
+            // 
             // FormCaja
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1050, 647);
+            BackColor = Color.White;
+            ClientSize = new Size(1349, 638);
+            Controls.Add(pictureBox1);
+            Controls.Add(CajaImg);
             Controls.Add(btnCobrar);
             Controls.Add(lblTotal);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(dgvCaja);
             Controls.Add(btnAgregar);
             Controls.Add(numCantidad);
             Controls.Add(cmbPlatos);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormCaja";
-            Text = "FormCaja";
+            Text = "CAJA";
             ((System.ComponentModel.ISupportInitialize)numCantidad).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgvCaja).EndInit();
+            ((System.ComponentModel.ISupportInitialize)CajaImg).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -149,10 +171,11 @@
         private NumericUpDown numCantidad;
         private ContextMenuStrip contextMenuStrip1;
         private Button btnAgregar;
-        private DataGridView dgvCaja;
         private Label label2;
         private Label label3;
         private Label lblTotal;
         private Button btnCobrar;
+        private PictureBox CajaImg;
+        private PictureBox pictureBox1;
     }
 }

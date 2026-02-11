@@ -139,17 +139,26 @@
   <data name="Mesa3txt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mesa3txt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ReferenciaTxt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ReferenciaTxt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Mesa5txt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mesa5txt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OrdenesTxt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OrdenesTxt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NombreTxt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NombreTxt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CamaraImg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CamaraImg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LupaImg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LupaImg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CategoriaTxt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CategoriaTxt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ReferenciaTxt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ReferenciaTxt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo palmero solo texto sin fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo palmero solo texto sin fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,17 +178,14 @@
   <data name="MenuTxt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MenuTxt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Mesa1txt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Mesa1txt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="caja" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\caja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Mesa2txt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mesa2txt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CamaraImg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CamaraImg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Mesa1txt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mesa1txt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ordenes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ordenes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,7 +211,7 @@
   <data name="DescripcionTxt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DescripcionTxt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Mesa5txt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Mesa5txt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CajaTxt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CajaTxt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

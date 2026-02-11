@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             LOGO = new PictureBox();
             LOGOTIPO = new PictureBox();
             menubtn = new Button();
@@ -230,6 +231,7 @@
             Controls.Add(mesasimg);
             ForeColor = SystemColors.ControlLightLight;
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "EL PALMERO RESTAURANT";
             ((System.ComponentModel.ISupportInitialize)LOGO).EndInit();

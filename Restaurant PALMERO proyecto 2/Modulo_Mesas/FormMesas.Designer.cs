@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(btnAbrirMesa));
             mesastxt = new PictureBox();
             MesaImg = new PictureBox();
             lblMesa1 = new Button();
@@ -46,12 +47,12 @@
             pictureBox9 = new PictureBox();
             pictureBox10 = new PictureBox();
             pedido = new GroupBox();
+            button1 = new Button();
             lblTotal = new Label();
             dgvPedido = new DataGridView();
             lblMesaSeleccionada = new Label();
             btnAgregar = new Button();
             btnFacturar = new Button();
-            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)mesastxt).BeginInit();
             ((System.ComponentModel.ISupportInitialize)MesaImg).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -283,6 +284,21 @@
             pedido.TabStop = false;
             pedido.Text = " ";
             // 
+            // button1
+            // 
+            button1.BackColor = Color.DarkSlateGray;
+            button1.Cursor = Cursors.Hand;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(84, 255);
+            button1.Name = "button1";
+            button1.Size = new Size(188, 35);
+            button1.TabIndex = 33;
+            button1.Text = "OCUPAR MESA";
+            button1.UseVisualStyleBackColor = false;
+            button1.Visible = false;
+            // 
             // lblTotal
             // 
             lblTotal.AutoSize = true;
@@ -345,21 +361,6 @@
             btnFacturar.Text = "FACTURAR";
             btnFacturar.UseVisualStyleBackColor = false;
             // 
-            // button1
-            // 
-            button1.BackColor = Color.DarkSlateGray;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(84, 255);
-            button1.Name = "button1";
-            button1.Size = new Size(188, 35);
-            button1.TabIndex = 33;
-            button1.Text = "OCUPAR MESA";
-            button1.UseVisualStyleBackColor = false;
-            button1.Visible = false;
-            // 
             // btnAbrirMesa
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -387,8 +388,9 @@
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox5);
             ForeColor = Color.White;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "btnAbrirMesa";
-            Text = "FormMesas";
+            Text = "GESTION DE MESAS Y PEDIDOS";
             Load += FormMesas_Load;
             ((System.ComponentModel.ISupportInitialize)mesastxt).EndInit();
             ((System.ComponentModel.ISupportInitialize)MesaImg).EndInit();

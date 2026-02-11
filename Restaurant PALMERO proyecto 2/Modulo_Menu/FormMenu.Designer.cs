@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             MenuImg = new PictureBox();
             MenuTxt = new PictureBox();
             panel1 = new Panel();
@@ -277,7 +278,7 @@
             dgvPlatos.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.White;
-            dataGridViewCellStyle1.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
             dataGridViewCellStyle1.ForeColor = Color.FromArgb(0, 0, 64);
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
@@ -286,7 +287,7 @@
             dgvPlatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvPlatos.Columns.AddRange(new DataGridViewColumn[] { ColumnaNombre, ColumnaPrecio, ColumnaCategoría, ColumnaDescripción });
             dgvPlatos.EnableHeadersVisualStyles = false;
-            dgvPlatos.Location = new Point(17, 124);
+            dgvPlatos.Location = new Point(17, 123);
             dgvPlatos.MultiSelect = false;
             dgvPlatos.Name = "dgvPlatos";
             dgvPlatos.ReadOnly = true;
@@ -385,7 +386,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1348, 671);
+            ClientSize = new Size(1348, 672);
             Controls.Add(btnLimpiar);
             Controls.Add(txtBuscar);
             Controls.Add(textoenelmenu);
@@ -398,8 +399,9 @@
             Controls.Add(MenuImg);
             Controls.Add(LupaImg);
             Controls.Add(pictureBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormMenu";
-            Text = "FormMenu";
+            Text = "EDITAR MENU";
             Load += FormMenu_Load;
             ((System.ComponentModel.ISupportInitialize)MenuImg).EndInit();
             ((System.ComponentModel.ISupportInitialize)MenuTxt).EndInit();
