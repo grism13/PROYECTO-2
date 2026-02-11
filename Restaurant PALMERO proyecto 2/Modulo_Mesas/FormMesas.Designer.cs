@@ -1,6 +1,6 @@
 ﻿namespace Restaurant_PALMERO_proyecto_2.Modulo_Mesas
 {
-    partial class btnAbrirMesa
+    partial class FormMesas
     {
         /// <summary>
         /// Required designer variable.
@@ -46,12 +46,14 @@
             pictureBox9 = new PictureBox();
             pictureBox10 = new PictureBox();
             pedido = new GroupBox();
+            numCantidad = new NumericUpDown();
+            btnOcupar = new Button();
+            cmbPlatos = new ComboBox();
             lblTotal = new Label();
             dgvPedido = new DataGridView();
             lblMesaSeleccionada = new Label();
-            btnAgregar = new Button();
+            btnAgregarPlato = new Button();
             btnFacturar = new Button();
-            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)mesastxt).BeginInit();
             ((System.ComponentModel.ISupportInitialize)MesaImg).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -65,6 +67,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             pedido.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numCantidad).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvPedido).BeginInit();
             SuspendLayout();
             // 
@@ -271,7 +274,9 @@
             // 
             // pedido
             // 
-            pedido.Controls.Add(button1);
+            pedido.Controls.Add(numCantidad);
+            pedido.Controls.Add(btnOcupar);
+            pedido.Controls.Add(cmbPlatos);
             pedido.Controls.Add(lblTotal);
             pedido.Controls.Add(dgvPedido);
             pedido.Controls.Add(lblMesaSeleccionada);
@@ -282,6 +287,39 @@
             pedido.TabIndex = 30;
             pedido.TabStop = false;
             pedido.Text = " ";
+            // 
+            // numCantidad
+            // 
+            numCantidad.Location = new Point(51, 466);
+            numCantidad.Name = "numCantidad";
+            numCantidad.Size = new Size(120, 23);
+            numCantidad.TabIndex = 34;
+            numCantidad.ValueChanged += numCantidad_ValueChanged;
+            // 
+            // btnOcupar
+            // 
+            btnOcupar.BackColor = Color.DarkSlateGray;
+            btnOcupar.Cursor = Cursors.Hand;
+            btnOcupar.FlatStyle = FlatStyle.Flat;
+            btnOcupar.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnOcupar.ForeColor = Color.White;
+            btnOcupar.Location = new Point(60, 266);
+            btnOcupar.Name = "btnOcupar";
+            btnOcupar.Size = new Size(240, 58);
+            btnOcupar.TabIndex = 33;
+            btnOcupar.Text = "OCUPAR MESA";
+            btnOcupar.UseVisualStyleBackColor = false;
+            btnOcupar.Visible = false;
+            btnOcupar.Click += btnOcupar_Click;
+            // 
+            // cmbPlatos
+            // 
+            cmbPlatos.FormattingEnabled = true;
+            cmbPlatos.Location = new Point(209, 466);
+            cmbPlatos.Name = "cmbPlatos";
+            cmbPlatos.Size = new Size(121, 23);
+            cmbPlatos.TabIndex = 33;
+            cmbPlatos.SelectedIndexChanged += cmbPlatos_SelectedIndexChanged;
             // 
             // lblTotal
             // 
@@ -299,10 +337,10 @@
             dgvPedido.BackgroundColor = Color.White;
             dgvPedido.BorderStyle = BorderStyle.None;
             dgvPedido.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPedido.Location = new Point(31, 65);
+            dgvPedido.Location = new Point(31, 48);
             dgvPedido.Name = "dgvPedido";
             dgvPedido.RowHeadersVisible = false;
-            dgvPedido.Size = new Size(299, 422);
+            dgvPedido.Size = new Size(299, 402);
             dgvPedido.TabIndex = 31;
             // 
             // lblMesaSeleccionada
@@ -316,20 +354,21 @@
             lblMesaSeleccionada.TabIndex = 31;
             lblMesaSeleccionada.Text = "SELECCIONE UNA MESA";
             // 
-            // btnAgregar
+            // btnAgregarPlato
             // 
-            btnAgregar.BackColor = Color.DarkSlateGray;
-            btnAgregar.BackgroundImage = Properties.Resources.logo_completo;
-            btnAgregar.Cursor = Cursors.Hand;
-            btnAgregar.FlatStyle = FlatStyle.Flat;
-            btnAgregar.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAgregar.ForeColor = Color.White;
-            btnAgregar.Location = new Point(884, 625);
-            btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(188, 35);
-            btnAgregar.TabIndex = 31;
-            btnAgregar.Text = "AGREGAR PLATO";
-            btnAgregar.UseVisualStyleBackColor = false;
+            btnAgregarPlato.BackColor = Color.DarkSlateGray;
+            btnAgregarPlato.BackgroundImage = Properties.Resources.logo_completo;
+            btnAgregarPlato.Cursor = Cursors.Hand;
+            btnAgregarPlato.FlatStyle = FlatStyle.Flat;
+            btnAgregarPlato.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAgregarPlato.ForeColor = Color.White;
+            btnAgregarPlato.Location = new Point(884, 625);
+            btnAgregarPlato.Name = "btnAgregarPlato";
+            btnAgregarPlato.Size = new Size(188, 35);
+            btnAgregarPlato.TabIndex = 31;
+            btnAgregarPlato.Text = "AGREGAR PLATO";
+            btnAgregarPlato.UseVisualStyleBackColor = false;
+            btnAgregarPlato.Click += btnAgregarPlato_Click;
             // 
             // btnFacturar
             // 
@@ -344,31 +383,16 @@
             btnFacturar.TabIndex = 32;
             btnFacturar.Text = "FACTURAR";
             btnFacturar.UseVisualStyleBackColor = false;
+            btnFacturar.Click += btnFacturar_Click;
             // 
-            // button1
-            // 
-            button1.BackColor = Color.DarkSlateGray;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(84, 255);
-            button1.Name = "button1";
-            button1.Size = new Size(188, 35);
-            button1.TabIndex = 33;
-            button1.Text = "OCUPAR MESA";
-            button1.UseVisualStyleBackColor = false;
-            button1.Visible = false;
-            // 
-            // btnAbrirMesa
+            // FormMesas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1354, 672);
             Controls.Add(btnFacturar);
-            Controls.Add(btnAgregar);
-            Controls.Add(pedido);
+            Controls.Add(btnAgregarPlato);
             Controls.Add(pictureBox10);
             Controls.Add(pictureBox9);
             Controls.Add(pictureBox8);
@@ -386,8 +410,9 @@
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox5);
+            Controls.Add(pedido);
             ForeColor = Color.White;
-            Name = "btnAbrirMesa";
+            Name = "FormMesas";
             Text = "FormMesas";
             Load += FormMesas_Load;
             ((System.ComponentModel.ISupportInitialize)mesastxt).EndInit();
@@ -404,6 +429,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             pedido.ResumeLayout(false);
             pedido.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numCantidad).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvPedido).EndInit();
             ResumeLayout(false);
         }
@@ -431,8 +457,10 @@
         private Label lblMesaSeleccionada;
         private DataGridView dgvPedido;
         private Label lblTotal;
-        private Button btnAgregar;
+        private Button btnAgregarPlato;
         private Button btnFacturar;
-        private Button button1;
+        private Button btnOcupar;
+        private ComboBox cmbPlatos;
+        private NumericUpDown numCantidad;
     }
 }

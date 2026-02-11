@@ -18,8 +18,8 @@ namespace Restaurant_PALMERO_proyecto_2
 
         private void mesasbtn_Click(object sender, EventArgs e)
         {
-            // Abrimos el gestor de mesas
-            Modulo_Mesas.btnAbrirMesa ventanaMesas = new Modulo_Mesas.btnAbrirMesa();
+            
+            Modulo_Mesas.FormMesas ventanaMesas = new Modulo_Mesas.FormMesas();
             ventanaMesas.ShowDialog();
         }
 

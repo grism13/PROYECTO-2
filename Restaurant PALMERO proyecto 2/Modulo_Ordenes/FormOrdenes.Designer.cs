@@ -48,53 +48,54 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(51, 72);
+            label1.Location = new Point(582, 335);
             label1.Name = "label1";
-            label1.Size = new Size(56, 20);
+            label1.Size = new Size(44, 15);
             label1.TabIndex = 0;
             label1.Text = "Mesa 1";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(210, 72);
+            label2.Location = new Point(721, 335);
             label2.Name = "label2";
-            label2.Size = new Size(56, 20);
+            label2.Size = new Size(44, 15);
             label2.TabIndex = 1;
             label2.Text = "Mesa 2";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(373, 72);
+            label3.Location = new Point(863, 335);
             label3.Name = "label3";
-            label3.Size = new Size(56, 20);
+            label3.Size = new Size(44, 15);
             label3.TabIndex = 2;
             label3.Text = "Mesa 3";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(536, 72);
+            label4.Location = new Point(1006, 335);
             label4.Name = "label4";
-            label4.Size = new Size(56, 20);
+            label4.Size = new Size(44, 15);
             label4.TabIndex = 3;
             label4.Text = "Mesa 4";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(695, 72);
+            label5.Location = new Point(1145, 335);
             label5.Name = "label5";
-            label5.Size = new Size(56, 20);
+            label5.Size = new Size(44, 15);
             label5.TabIndex = 4;
             label5.Text = "Mesa 5";
             // 
             // button2
             // 
-            button2.Location = new Point(38, 161);
+            button2.Location = new Point(570, 402);
+            button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(94, 56);
+            button2.Size = new Size(82, 42);
             button2.TabIndex = 6;
             button2.Text = "ESTADO DE PEDIDO";
             button2.UseVisualStyleBackColor = true;
@@ -102,36 +103,40 @@
             // 
             // button1
             // 
-            button1.Location = new Point(197, 161);
+            button1.Location = new Point(709, 402);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(94, 56);
+            button1.Size = new Size(82, 42);
             button1.TabIndex = 7;
             button1.Text = "ESTADO DE PEDIDO";
             button1.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            button3.Location = new Point(353, 161);
+            button3.Location = new Point(846, 402);
+            button3.Margin = new Padding(3, 2, 3, 2);
             button3.Name = "button3";
-            button3.Size = new Size(94, 56);
+            button3.Size = new Size(82, 42);
             button3.TabIndex = 8;
             button3.Text = "ESTADO DE PEDIDO";
             button3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            button4.Location = new Point(520, 161);
+            button4.Location = new Point(992, 402);
+            button4.Margin = new Padding(3, 2, 3, 2);
             button4.Name = "button4";
-            button4.Size = new Size(94, 56);
+            button4.Size = new Size(82, 42);
             button4.TabIndex = 9;
             button4.Text = "ESTADO DE PEDIDO";
             button4.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            button5.Location = new Point(672, 161);
+            button5.Location = new Point(1125, 402);
+            button5.Margin = new Padding(3, 2, 3, 2);
             button5.Name = "button5";
-            button5.Size = new Size(94, 56);
+            button5.Size = new Size(82, 42);
             button5.TabIndex = 10;
             button5.Text = "ESTADO DE PEDIDO";
             button5.UseVisualStyleBackColor = true;
@@ -139,9 +144,10 @@
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(51, 260);
+            checkBox1.Location = new Point(582, 476);
+            checkBox1.Margin = new Padding(3, 2, 3, 2);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(68, 24);
+            checkBox1.Size = new Size(56, 19);
             checkBox1.TabIndex = 11;
             checkBox1.Text = "LISTO";
             checkBox1.UseVisualStyleBackColor = true;
@@ -149,9 +155,10 @@
             // checkBox2
             // 
             checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(210, 260);
+            checkBox2.Location = new Point(721, 476);
+            checkBox2.Margin = new Padding(3, 2, 3, 2);
             checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(68, 24);
+            checkBox2.Size = new Size(56, 19);
             checkBox2.TabIndex = 12;
             checkBox2.Text = "LISTO";
             checkBox2.UseVisualStyleBackColor = true;
@@ -159,9 +166,10 @@
             // checkBox3
             // 
             checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(361, 260);
+            checkBox3.Location = new Point(853, 476);
+            checkBox3.Margin = new Padding(3, 2, 3, 2);
             checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(68, 24);
+            checkBox3.Size = new Size(56, 19);
             checkBox3.TabIndex = 13;
             checkBox3.Text = "LISTO";
             checkBox3.UseVisualStyleBackColor = true;
@@ -169,9 +177,10 @@
             // checkBox4
             // 
             checkBox4.AutoSize = true;
-            checkBox4.Location = new Point(536, 260);
+            checkBox4.Location = new Point(1006, 476);
+            checkBox4.Margin = new Padding(3, 2, 3, 2);
             checkBox4.Name = "checkBox4";
-            checkBox4.Size = new Size(68, 24);
+            checkBox4.Size = new Size(56, 19);
             checkBox4.TabIndex = 14;
             checkBox4.Text = "LISTO";
             checkBox4.UseVisualStyleBackColor = true;
@@ -179,18 +188,19 @@
             // checkBox5
             // 
             checkBox5.AutoSize = true;
-            checkBox5.Location = new Point(683, 260);
+            checkBox5.Location = new Point(1135, 476);
+            checkBox5.Margin = new Padding(3, 2, 3, 2);
             checkBox5.Name = "checkBox5";
-            checkBox5.Size = new Size(68, 24);
+            checkBox5.Size = new Size(56, 19);
             checkBox5.TabIndex = 15;
             checkBox5.Text = "LISTO";
             checkBox5.UseVisualStyleBackColor = true;
             // 
             // FormOrdenes
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1312, 645);
+            ClientSize = new Size(1807, 884);
             Controls.Add(checkBox5);
             Controls.Add(checkBox4);
             Controls.Add(checkBox3);
@@ -206,6 +216,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormOrdenes";
             Text = "FormOrdenes";
             ResumeLayout(false);
