@@ -245,5 +245,25 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Menu
             dgvPlatos.DataSource = null;
             dgvPlatos.DataSource = listaFiltrada;
         }
+
+        //Aqui trato de no caer en la locura (Eliezer) 
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+
+            // SE ve si no existen los datos y se agregan a inicio en esta parte
+            foreach (var platoLocal in listaPlatos)
+            {
+                // Verificamos si ya existe un plato con ese nombre en el Form1
+                bool yaExiste = Form1.MenuGlobal.Any(p => p.Nombre == platoLocal.Nombre);
+
+                // Si NO existe, lo agregamos (así evitamos duplicados)
+                if (yaExiste == false)
+                {
+                    Form1.MenuGlobal.Add(platoLocal);
+                }
+            }
+        }
     }
 }

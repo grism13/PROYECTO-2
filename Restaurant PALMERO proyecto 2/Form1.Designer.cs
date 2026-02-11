@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             LOGO = new PictureBox();
             LOGOTIPO = new PictureBox();
             menubtn = new Button();
@@ -53,9 +54,10 @@
             // 
             LOGO.BackColor = Color.Transparent;
             LOGO.Image = Properties.Resources.logo_palmero_solo_texto_sin_fondo;
-            LOGO.Location = new Point(137, 101);
+            LOGO.Location = new Point(157, 135);
+            LOGO.Margin = new Padding(3, 4, 3, 4);
             LOGO.Name = "LOGO";
-            LOGO.Size = new Size(1088, 326);
+            LOGO.Size = new Size(1243, 435);
             LOGO.SizeMode = PictureBoxSizeMode.Zoom;
             LOGO.TabIndex = 0;
             LOGO.TabStop = false;
@@ -64,9 +66,10 @@
             // 
             LOGOTIPO.BackColor = Color.Transparent;
             LOGOTIPO.Image = Properties.Resources.logo_website_icon_2;
-            LOGOTIPO.Location = new Point(600, 78);
+            LOGOTIPO.Location = new Point(686, 104);
+            LOGOTIPO.Margin = new Padding(3, 4, 3, 4);
             LOGOTIPO.Name = "LOGOTIPO";
-            LOGOTIPO.Size = new Size(180, 130);
+            LOGOTIPO.Size = new Size(206, 173);
             LOGOTIPO.SizeMode = PictureBoxSizeMode.Zoom;
             LOGOTIPO.TabIndex = 1;
             LOGOTIPO.TabStop = false;
@@ -82,9 +85,10 @@
             menubtn.FlatStyle = FlatStyle.Flat;
             menubtn.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             menubtn.ForeColor = Color.White;
-            menubtn.Location = new Point(443, 448);
+            menubtn.Location = new Point(506, 597);
+            menubtn.Margin = new Padding(3, 4, 3, 4);
             menubtn.Name = "menubtn";
-            menubtn.Size = new Size(234, 46);
+            menubtn.Size = new Size(267, 61);
             menubtn.TabIndex = 2;
             menubtn.Text = "MENU";
             menubtn.UseVisualStyleBackColor = false;
@@ -100,9 +104,10 @@
             mesasbtn.FlatStyle = FlatStyle.Flat;
             mesasbtn.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             mesasbtn.ForeColor = Color.White;
-            mesasbtn.Location = new Point(443, 527);
+            mesasbtn.Location = new Point(506, 703);
+            mesasbtn.Margin = new Padding(3, 4, 3, 4);
             mesasbtn.Name = "mesasbtn";
-            mesasbtn.Size = new Size(234, 44);
+            mesasbtn.Size = new Size(267, 59);
             mesasbtn.TabIndex = 3;
             mesasbtn.Text = "MESAS";
             mesasbtn.UseVisualStyleBackColor = true;
@@ -118,12 +123,14 @@
             cajabtn.FlatStyle = FlatStyle.Flat;
             cajabtn.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cajabtn.ForeColor = Color.White;
-            cajabtn.Location = new Point(789, 448);
+            cajabtn.Location = new Point(902, 597);
+            cajabtn.Margin = new Padding(3, 4, 3, 4);
             cajabtn.Name = "cajabtn";
-            cajabtn.Size = new Size(234, 46);
+            cajabtn.Size = new Size(267, 61);
             cajabtn.TabIndex = 7;
             cajabtn.Text = "CAJA";
             cajabtn.UseVisualStyleBackColor = true;
+            cajabtn.Click += cajabtn_Click;
             // 
             // ordenesbtn
             // 
@@ -135,12 +142,14 @@
             ordenesbtn.FlatStyle = FlatStyle.Flat;
             ordenesbtn.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ordenesbtn.ForeColor = Color.White;
-            ordenesbtn.Location = new Point(789, 527);
+            ordenesbtn.Location = new Point(902, 703);
+            ordenesbtn.Margin = new Padding(3, 4, 3, 4);
             ordenesbtn.Name = "ordenesbtn";
-            ordenesbtn.Size = new Size(234, 44);
+            ordenesbtn.Size = new Size(267, 59);
             ordenesbtn.TabIndex = 6;
             ordenesbtn.Text = "ORDENES";
             ordenesbtn.UseVisualStyleBackColor = true;
+            ordenesbtn.Click += ordenesbtn_Click;
             // 
             // salirbtn
             // 
@@ -153,9 +162,10 @@
             salirbtn.FlatStyle = FlatStyle.Flat;
             salirbtn.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             salirbtn.ForeColor = Color.White;
-            salirbtn.Location = new Point(71, 46);
+            salirbtn.Location = new Point(81, 61);
+            salirbtn.Margin = new Padding(3, 4, 3, 4);
             salirbtn.Name = "salirbtn";
-            salirbtn.Size = new Size(65, 21);
+            salirbtn.Size = new Size(74, 28);
             salirbtn.TabIndex = 5;
             salirbtn.Text = "SALIR";
             salirbtn.UseVisualStyleBackColor = false;
@@ -163,9 +173,10 @@
             // OrdenesImg
             // 
             OrdenesImg.Image = Properties.Resources.ordenes;
-            OrdenesImg.Location = new Point(697, 500);
+            OrdenesImg.Location = new Point(797, 667);
+            OrdenesImg.Margin = new Padding(3, 4, 3, 4);
             OrdenesImg.Name = "OrdenesImg";
-            OrdenesImg.Size = new Size(99, 111);
+            OrdenesImg.Size = new Size(113, 148);
             OrdenesImg.SizeMode = PictureBoxSizeMode.Zoom;
             OrdenesImg.TabIndex = 10;
             OrdenesImg.TabStop = false;
@@ -173,9 +184,10 @@
             // SalirImg
             // 
             SalirImg.Image = Properties.Resources.salir;
-            SalirImg.Location = new Point(17, 24);
+            SalirImg.Location = new Point(19, 32);
+            SalirImg.Margin = new Padding(3, 4, 3, 4);
             SalirImg.Name = "SalirImg";
-            SalirImg.Size = new Size(75, 62);
+            SalirImg.Size = new Size(86, 83);
             SalirImg.SizeMode = PictureBoxSizeMode.Zoom;
             SalirImg.TabIndex = 11;
             SalirImg.TabStop = false;
@@ -183,9 +195,10 @@
             // MenuImg
             // 
             MenuImg.Image = Properties.Resources.menu;
-            MenuImg.Location = new Point(358, 410);
+            MenuImg.Location = new Point(409, 547);
+            MenuImg.Margin = new Padding(3, 4, 3, 4);
             MenuImg.Name = "MenuImg";
-            MenuImg.Size = new Size(102, 111);
+            MenuImg.Size = new Size(117, 148);
             MenuImg.SizeMode = PictureBoxSizeMode.Zoom;
             MenuImg.TabIndex = 13;
             MenuImg.TabStop = false;
@@ -193,9 +206,10 @@
             // CajaImg
             // 
             CajaImg.Image = Properties.Resources.caja;
-            CajaImg.Location = new Point(697, 410);
+            CajaImg.Location = new Point(797, 547);
+            CajaImg.Margin = new Padding(3, 4, 3, 4);
             CajaImg.Name = "CajaImg";
-            CajaImg.Size = new Size(99, 111);
+            CajaImg.Size = new Size(113, 148);
             CajaImg.SizeMode = PictureBoxSizeMode.Zoom;
             CajaImg.TabIndex = 14;
             CajaImg.TabStop = false;
@@ -203,19 +217,20 @@
             // mesasimg
             // 
             mesasimg.Image = Properties.Resources.mesadisponibleImg;
-            mesasimg.Location = new Point(358, 500);
+            mesasimg.Location = new Point(409, 667);
+            mesasimg.Margin = new Padding(3, 4, 3, 4);
             mesasimg.Name = "mesasimg";
-            mesasimg.Size = new Size(89, 82);
+            mesasimg.Size = new Size(102, 109);
             mesasimg.SizeMode = PictureBoxSizeMode.Zoom;
             mesasimg.TabIndex = 15;
             mesasimg.TabStop = false;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.GhostWhite;
-            ClientSize = new Size(1355, 678);
+            ClientSize = new Size(1549, 904);
             Controls.Add(cajabtn);
             Controls.Add(ordenesbtn);
             Controls.Add(salirbtn);
@@ -230,8 +245,10 @@
             Controls.Add(mesasimg);
             ForeColor = SystemColors.ControlLightLight;
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "EL PALMERO RESTAURANT";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)LOGO).EndInit();
             ((System.ComponentModel.ISupportInitialize)LOGOTIPO).EndInit();
             ((System.ComponentModel.ISupportInitialize)OrdenesImg).EndInit();

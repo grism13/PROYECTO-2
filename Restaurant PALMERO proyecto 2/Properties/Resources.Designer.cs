@@ -83,6 +83,16 @@ namespace Restaurant_PALMERO_proyecto_2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CajaTxt {
+            get {
+                object obj = ResourceManager.GetObject("CajaTxt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CamaraImg {
             get {
                 object obj = ResourceManager.GetObject("CamaraImg", resourceCulture);
@@ -326,6 +336,16 @@ namespace Restaurant_PALMERO_proyecto_2.Properties {
         internal static System.Drawing.Bitmap ordenes {
             get {
                 object obj = ResourceManager.GetObject("ordenes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OrdenesTxt {
+            get {
+                object obj = ResourceManager.GetObject("OrdenesTxt", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
