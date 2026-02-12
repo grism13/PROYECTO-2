@@ -28,321 +28,342 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOrdenes));
-            button2 = new Button();
-            checkBox1 = new CheckBox();
-            pictureBox1 = new PictureBox();
-            panel1 = new Panel();
-            panel2 = new Panel();
-            pictureBox6 = new PictureBox();
-            button6 = new Button();
-            checkBox6 = new CheckBox();
-            panel3 = new Panel();
-            pictureBox2 = new PictureBox();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
             button1 = new Button();
-            checkBox2 = new CheckBox();
-            panel4 = new Panel();
-            pictureBox3 = new PictureBox();
+            button2 = new Button();
             button3 = new Button();
-            checkBox3 = new CheckBox();
-            panel5 = new Panel();
-            pictureBox4 = new PictureBox();
             button4 = new Button();
-            checkBox4 = new CheckBox();
+            button5 = new Button();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             OrdenesImg = new PictureBox();
+            panel1 = new Panel();
+            panel2 = new Panel();
+            panel3 = new Panel();
+            panel4 = new Panel();
+            panel5 = new Panel();
+            button6 = new Button();
+            button7 = new Button();
+            button8 = new Button();
+            button9 = new Button();
+            button10 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)OrdenesImg).BeginInit();
             SuspendLayout();
             // 
-            // button2
+            // label1
             // 
-            button2.Location = new Point(69, 264);
-            button2.Margin = new Padding(3, 2, 3, 2);
-            button2.Name = "button2";
-            button2.Size = new Size(82, 42);
-            button2.TabIndex = 6;
-            button2.Text = "ESTADO DE PEDIDO";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            label1.AutoSize = true;
+            label1.Location = new Point(57, 96);
+            label1.Name = "label1";
+            label1.Size = new Size(56, 20);
+            label1.TabIndex = 0;
+            label1.Text = "Mesa 1";
             // 
-            // checkBox1
+            // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(210, 72);
+            label2.Location = new Point(240, 96);
             label2.Name = "label2";
             label2.Size = new Size(56, 20);
             label2.TabIndex = 1;
             label2.Text = "Mesa 2";
             // 
-            // pictureBox1
+            // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(373, 72);
+            label3.Location = new Point(426, 96);
             label3.Name = "label3";
             label3.Size = new Size(56, 20);
             label3.TabIndex = 2;
             label3.Text = "Mesa 3";
             // 
-            // panel1
+            // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(536, 72);
+            label4.Location = new Point(613, 96);
             label4.Name = "label4";
             label4.Size = new Size(56, 20);
             label4.TabIndex = 3;
             label4.Text = "Mesa 4";
             // 
-            // panel2
+            // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(695, 72);
+            label5.Location = new Point(794, 96);
             label5.Name = "label5";
             label5.Size = new Size(56, 20);
             label5.TabIndex = 4;
             label5.Text = "Mesa 5";
             // 
-            // pictureBox6
+            // button1
             // 
-            button2.Location = new Point(38, 161);
+            button1.Location = new Point(43, 215);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(107, 75);
+            button1.TabIndex = 5;
+            button1.Text = "ESTADO DE PEDIDO";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(225, 215);
+            button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
-            button2.Size = new Size(94, 56);
+            button2.Size = new Size(107, 75);
             button2.TabIndex = 6;
             button2.Text = "ESTADO DE PEDIDO";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // button6
-            // 
-            button1.Location = new Point(197, 161);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 56);
-            button1.TabIndex = 7;
-            button1.Text = "ESTADO DE PEDIDO";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            button3.Location = new Point(353, 161);
-            button3.Name = "button3";
-            button3.Size = new Size(94, 56);
-            button3.TabIndex = 8;
-            button3.Text = "ESTADO DE PEDIDO";
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            button4.Location = new Point(520, 161);
-            button4.Name = "button4";
-            button4.Size = new Size(94, 56);
-            button4.TabIndex = 9;
-            button4.Text = "ESTADO DE PEDIDO";
-            button4.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            button5.Location = new Point(672, 161);
-            button5.Name = "button5";
-            button5.Size = new Size(94, 56);
-            button5.TabIndex = 10;
-            button5.Text = "ESTADO DE PEDIDO";
-            button5.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(51, 260);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(68, 24);
-            checkBox1.TabIndex = 11;
-            checkBox1.Text = "LISTO";
-            checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(210, 260);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(68, 24);
-            checkBox2.TabIndex = 12;
-            checkBox2.Text = "LISTO";
-            checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // panel4
-            // 
-            panel4.Controls.Add(pictureBox3);
-            panel4.Controls.Add(button3);
-            panel4.Controls.Add(checkBox3);
-            panel4.Location = new Point(822, 156);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(227, 456);
-            panel4.TabIndex = 22;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = Properties.Resources.Mesa4txt;
-            pictureBox3.Location = new Point(37, 16);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(143, 49);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 16;
-            pictureBox3.TabStop = false;
-            // 
             // button3
             // 
-            button3.Location = new Point(71, 264);
-            button3.Margin = new Padding(3, 2, 3, 2);
+            button3.Location = new Point(403, 215);
+            button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
-            button3.Size = new Size(82, 42);
-            button3.TabIndex = 6;
+            button3.Size = new Size(107, 75);
+            button3.TabIndex = 7;
             button3.Text = "ESTADO DE PEDIDO";
             button3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(361, 260);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(68, 24);
-            checkBox3.TabIndex = 13;
-            checkBox3.Text = "LISTO";
-            checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // panel5
-            // 
-            panel5.Controls.Add(pictureBox4);
-            panel5.Controls.Add(button4);
-            panel5.Controls.Add(checkBox4);
-            panel5.Location = new Point(1075, 156);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(227, 456);
-            panel5.TabIndex = 22;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = Properties.Resources.Mesa5txt;
-            pictureBox4.Location = new Point(47, 16);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(135, 49);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 16;
-            pictureBox4.TabStop = false;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
-            button4.Location = new Point(69, 264);
-            button4.Margin = new Padding(3, 2, 3, 2);
+            button4.Location = new Point(594, 215);
+            button4.Margin = new Padding(3, 4, 3, 4);
             button4.Name = "button4";
-            button4.Size = new Size(82, 42);
-            button4.TabIndex = 6;
+            button4.Size = new Size(107, 75);
+            button4.TabIndex = 8;
             button4.Text = "ESTADO DE PEDIDO";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
-            // checkBox4
+            // button5
             // 
-            checkBox4.AutoSize = true;
-            checkBox4.Location = new Point(536, 260);
-            checkBox4.Name = "checkBox4";
-            checkBox4.Size = new Size(68, 24);
-            checkBox4.TabIndex = 14;
-            checkBox4.Text = "LISTO";
-            checkBox4.UseVisualStyleBackColor = true;
+            button5.Location = new Point(768, 215);
+            button5.Margin = new Padding(3, 4, 3, 4);
+            button5.Name = "button5";
+            button5.Size = new Size(107, 75);
+            button5.TabIndex = 9;
+            button5.Text = "ESTADO DE PEDIDO";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(100, 50);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Location = new Point(0, 0);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(100, 50);
+            pictureBox2.TabIndex = 0;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Location = new Point(0, 0);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(100, 50);
+            pictureBox3.TabIndex = 0;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Location = new Point(0, 0);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(100, 50);
+            pictureBox4.TabIndex = 0;
+            pictureBox4.TabStop = false;
             // 
             // pictureBox5
             // 
             pictureBox5.Image = Properties.Resources.OrdenesTxt;
-            pictureBox5.Location = new Point(117, -18);
+            pictureBox5.Location = new Point(134, -24);
+            pictureBox5.Margin = new Padding(3, 4, 3, 4);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(263, 132);
+            pictureBox5.Size = new Size(301, 176);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 23;
             pictureBox5.TabStop = false;
             // 
             // OrdenesImg
             // 
-            checkBox5.AutoSize = true;
-            checkBox5.Location = new Point(683, 260);
-            checkBox5.Name = "checkBox5";
-            checkBox5.Size = new Size(68, 24);
-            checkBox5.TabIndex = 15;
-            checkBox5.Text = "LISTO";
-            checkBox5.UseVisualStyleBackColor = true;
+            OrdenesImg.Location = new Point(0, 0);
+            OrdenesImg.Name = "OrdenesImg";
+            OrdenesImg.Size = new Size(100, 50);
+            OrdenesImg.TabIndex = 0;
+            OrdenesImg.TabStop = false;
+            // 
+            // panel1
+            // 
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(200, 100);
+            panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(200, 100);
+            panel2.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            panel3.Location = new Point(0, 0);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(200, 100);
+            panel3.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            panel4.Location = new Point(0, 0);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(200, 100);
+            panel4.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            panel5.Location = new Point(0, 0);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(200, 100);
+            panel5.TabIndex = 0;
+            // 
+            // button6
+            // 
+            button6.Location = new Point(43, 348);
+            button6.Name = "button6";
+            button6.Size = new Size(94, 29);
+            button6.TabIndex = 24;
+            button6.Text = "LISTO";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
+            // 
+            // button7
+            // 
+            button7.Location = new Point(225, 348);
+            button7.Name = "button7";
+            button7.Size = new Size(94, 29);
+            button7.TabIndex = 25;
+            button7.Text = "LISTO";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
+            // 
+            // button8
+            // 
+            button8.Location = new Point(403, 348);
+            button8.Name = "button8";
+            button8.Size = new Size(94, 29);
+            button8.TabIndex = 26;
+            button8.Text = "LISTO";
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
+            // 
+            // button9
+            // 
+            button9.Location = new Point(594, 358);
+            button9.Name = "button9";
+            button9.Size = new Size(94, 29);
+            button9.TabIndex = 27;
+            button9.Text = "LISTO";
+            button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
+            // 
+            // button10
+            // 
+            button10.Location = new Point(768, 358);
+            button10.Name = "button10";
+            button10.Size = new Size(94, 29);
+            button10.TabIndex = 28;
+            button10.Text = "LISTO";
+            button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
             // 
             // FormOrdenes
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1312, 645);
-            Controls.Add(checkBox5);
-            Controls.Add(checkBox4);
-            Controls.Add(checkBox3);
-            Controls.Add(checkBox2);
-            Controls.Add(checkBox1);
+            ClientSize = new Size(1499, 860);
+            Controls.Add(button10);
+            Controls.Add(button9);
+            Controls.Add(button8);
+            Controls.Add(button7);
+            Controls.Add(button6);
             Controls.Add(button5);
             Controls.Add(button4);
             Controls.Add(button3);
-            Controls.Add(button1);
             Controls.Add(button2);
+            Controls.Add(button1);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Controls.Add(pictureBox5);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FormOrdenes";
             Text = "ORDENES";
             Load += FormOrdenes_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)OrdenesImg).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-        private Button button2;
-        private CheckBox checkBox1;
-        private PictureBox pictureBox1;
-        private Panel panel1;
-        private Panel panel2;
-        private PictureBox pictureBox6;
+
+        // Declaración de Variables (Esto es lo que faltaba o estaba duplicado)
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox OrdenesImg;
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
         private Button button6;
-        private CheckBox checkBox6;
-        private Panel panel3;
-        private PictureBox pictureBox2;
-        private Button button1;
-        private CheckBox checkBox2;
-        private Panel panel4;
-        private PictureBox pictureBox3;
-        private Button button3;
-        private CheckBox checkBox3;
-        private Panel panel5;
-        private PictureBox pictureBox4;
-        private Button button4;
-        private CheckBox checkBox4;
-        private PictureBox pictureBox5;
-        private PictureBox OrdenesImg;
+        private Button button7;
+        private Button button8;
+        private Button button9;
+        private Button button10;
     }
 }

@@ -1,4 +1,4 @@
-using Restaurant_PALMERO_proyecto_2.Modulo_Menu;
+﻿using Restaurant_PALMERO_proyecto_2.Modulo_Menu;
 using System.Collections.Generic;
 
 
@@ -7,11 +7,19 @@ namespace Restaurant_PALMERO_proyecto_2
     public partial class Form1 : Form
     {
 
-        //Aqui a�ado parte del codigo para guardar los platos en el sistema
+        //Aqui añado parte del codigo para guardar los platos en el sistema
 
         public static List<Plato> MenuGlobal = new List<Plato>();
 
-        //Aqui se a�ade parte de codigo para facturas
+        //Aqui se añade parte de codigo para facturas
+        public static Dictionary<int, bool> MesaOcupada = new Dictionary<int, bool>();
+
+
+        // Historial de facturas
+        public static System.ComponentModel.BindingList<Factura> HistorialFacturas = new System.ComponentModel.BindingList<Factura>();
+
+        //Esto es para aclarar si una mesa esta lista o no
+        public static List<Factura> PedidosListosParaServir = new List<Factura>();
 
 
         public Form1()
@@ -31,7 +39,7 @@ namespace Restaurant_PALMERO_proyecto_2
 
         private void mesasbtn_Click(object sender, EventArgs e)
         {
-            
+            // Código limpio: Solo abre la ventana y espera a que cierres
             Modulo_Mesas.FormMesas ventanaMesas = new Modulo_Mesas.FormMesas();
             ventanaMesas.ShowDialog();
         }
@@ -60,7 +68,7 @@ namespace Restaurant_PALMERO_proyecto_2
             if (MenuGlobal.Count == 0)
             {
                 MenuGlobal.Add(new Plato("Linguinis con langostinos", 15m, "Plato fuerte", "Pasta con salsa."));
-                MenuGlobal.Add(new Plato("Degustaci�n de mejillones", 12m, "Entrada", "Frescos."));
+                MenuGlobal.Add(new Plato("Degustación de mejillones", 12m, "Entrada", "Frescos."));
                 MenuGlobal.Add(new Plato("Quesillo", 4m, "Postre", "Dulce casero."));
                 MenuGlobal.Add(new Plato("Jugo de Parchita", 3m, "Bebida", "Natural."));
             }
@@ -71,6 +79,32 @@ namespace Restaurant_PALMERO_proyecto_2
 
         }
 
+        public class FacturaMesa
+        {
+            public int NumeroMesa { get; set; }
+            public decimal PrecioTotal { get; set; }
+            public List<string> PlatosPedidos { get; set; } = new List<string>();
+        }
+
+        public static class DatosSistema
+        {
+            // Aquí se guardarán todas las facturas que hagas en el módulo de mesas
+            public static List<FacturaMesa> HistorialFacturas = new List<FacturaMesa>();
+        }
+
     }
- }
+    // Molde para la información de la orden
+    public class FacturaMesa
+    {
+        public int NumeroMesa { get; set; }
+        public decimal PrecioTotal { get; set; }
+        public List<string> PlatosPedidos { get; set; } = new List<string>();
+    }
+
+    // Contenedor global accesible desde todo el proyecto
+    public static class DatosSistema
+    {
+        public static List<FacturaMesa> HistorialOrdenes = new List<FacturaMesa>();
+    }
+}
 

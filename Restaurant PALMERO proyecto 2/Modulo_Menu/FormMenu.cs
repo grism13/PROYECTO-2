@@ -29,32 +29,13 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Menu
             dgvPlatos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvPlatos.AutoGenerateColumns = false;
 
-            // --- 2. CREACIÓN DE LOS OBJETOS (LOS PLATOS) ---
+            listaPlatos = new List<Plato>(Form1.MenuGlobal);
 
-            // Plato 1: El Fuerte
-            Plato p1 = new Plato("Linguinis con langostinos", 15m, "Plato fuerte", "Pasta al dente bañada en una suave salsa de vino blanco y ajo, coronada con langostinos frescos salteados.");
+            // Conectamos a la tabla visual
+            dgvPlatos.DataSource = null;
+            dgvPlatos.DataSource = listaPlatos;
 
-            // Plato 2: La Entrada
-            Plato p2 = new Plato("Degustación de mejillones", 12m, "Entrada", "Selección de mejillones frescos preparados con la receta especial de la casa, toques cítricos y especias.");
-
-            // Plato 3: El Postre
-            Plato p3 = new Plato("Quesillo", 4m, "Postre", "El clásico postre venezolano: cremoso, suave y bañado en su inconfundible caramelo oscuro artesanal.");
-
-            // Plato 4: La Bebida
-            Plato p4 = new Plato("Jugo de Parchita", 3m, "Bebida", "Bebida natural concentrada, dulce y refrescante, servida con abundante hielo para el calor.");
-
-            // --- 3. GUARDADO EN LA LISTA (MEMORIA) ---
-            listaPlatos.Add(p1);
-            listaPlatos.Add(p2);
-            listaPlatos.Add(p3);
-            listaPlatos.Add(p4);
-
-            listaPlatos = listaPlatos.OrderBy(x => x.Categoria).ThenBy(x => x.Nombre).ToList();
-
-            // --- 4. MOSTRAR EN PANTALLA ---
-            dgvPlatos.DataSource = null;        // Limpiamos la conexión anterior
-            dgvPlatos.DataSource = listaPlatos; // Conectamos la lista nueva
-
+            
 
         }
         private void EstilizarTabla()
@@ -88,7 +69,7 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Menu
         private void btnGuardar_Click(object sender, EventArgs e)
         {
 
-            // 1. VALIDAR PRECIO (Esto ya lo tenías)
+            // 1. VALIDAR PRECIO 
             decimal precio;
             if (!decimal.TryParse(txtPrecio.Text, out precio))
             {
@@ -252,18 +233,14 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Menu
         {
             base.OnFormClosing(e);
 
-            // SE ve si no existen los datos y se agregan a inicio en esta parte
-            foreach (var platoLocal in listaPlatos)
-            {
-                // Verificamos si ya existe un plato con ese nombre en el Form1
-                bool yaExiste = Form1.MenuGlobal.Any(p => p.Nombre == platoLocal.Nombre);
+            // 1. Borramos todo lo que había en la memoria principal (para quitar los eliminados)
+            Form1.MenuGlobal.Clear();
 
-                // Si NO existe, lo agregamos (así evitamos duplicados)
-                if (yaExiste == false)
-                {
-                    Form1.MenuGlobal.Add(platoLocal);
-                }
-            }
+            // 2. Copiamos exactamente lo que tienes en pantalla ahora mismo
+            Form1.MenuGlobal.AddRange(listaPlatos);
+
+           
         }
     }
+    
 }

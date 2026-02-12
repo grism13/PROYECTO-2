@@ -4,12 +4,15 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.ComponentModel; // Necesario para las listas inteligentes
 using System.Linq; // Necesario para buscar y sumar
+using Restaurant_PALMERO_proyecto_2;                // Para ver Form1
+using Restaurant_PALMERO_proyecto_2.Modulo_Menu;    // Para ver la clase Plato
+using Restaurant_PALMERO_proyecto_2.Modulo_Ordenes; // Para ver DetalleOrden
 
 namespace Restaurant_PALMERO_proyecto_2.Modulo_Mesas
 {
     public partial class FormMesas : Form
     {
-        // --- 1. MEMORIA DEL SISTEMA ---
+
         int mesaActual = 0;
 
         // Usamos BindingList para que la tabla se actualice sola
@@ -17,6 +20,7 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Mesas
 
         // Mapa para ubicar los botones de las mesas
         Dictionary<int, Button> botonesMesas = new Dictionary<int, Button>();
+
 
         public FormMesas()
         {
@@ -41,65 +45,135 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Mesas
             catch { }
         }
 
+        //Edito esto
         private void FormMesas_Load(object sender, EventArgs e)
         {
-            // --- 2. CONFIGURACIÓN VISUAL DE LA TABLA (Anti-Errores) ---
+            // 1. CONFIGURACIÓN VISUAL DE LA TABLA
             dgvPedido.DataSource = null;
             dgvPedido.Columns.Clear();
 
-            // Estilo Visual: Letra Negra sobre Fondo Blanco
             dgvPedido.BackgroundColor = Color.White;
             dgvPedido.DefaultCellStyle.BackColor = Color.White;
             dgvPedido.DefaultCellStyle.ForeColor = Color.Black;
             dgvPedido.DefaultCellStyle.SelectionBackColor = Color.DarkSlateGray;
             dgvPedido.DefaultCellStyle.SelectionForeColor = Color.White;
-
             dgvPedido.RowHeadersVisible = false;
-            dgvPedido.AutoGenerateColumns = true;
             dgvPedido.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            // --- 3. CARGAR EL MENÚ ---
+            // 2. CARGAR EL MENÚ EN EL COMBOBOX
             if (cmbPlatos != null)
             {
-                cmbPlatos.DropDownStyle = ComboBoxStyle.DropDownList; // Bloquear escritura
-                cmbPlatos.Items.Clear();
-                cmbPlatos.Items.Add("Linguinis con langostinos");
-                cmbPlatos.Items.Add("Degustación de mejillones");
-                cmbPlatos.Items.Add("Quesillo");
-                cmbPlatos.Items.Add("Jugo de Parchita");
-                cmbPlatos.SelectedIndex = -1; // Sin selección inicial
+                cmbPlatos.DropDownStyle = ComboBoxStyle.DropDownList;
+                cmbPlatos.DataSource = null;
+                cmbPlatos.DataSource = Form1.MenuGlobal;
+                cmbPlatos.DisplayMember = "Nombre";
+                cmbPlatos.ValueMember = "Precio";
+                cmbPlatos.SelectedIndex = -1;
             }
 
-            // --- 4. INICIO LIMPIO ---
-            OcultarPanelDerecho();
-            if (lblMesaSeleccionada != null) lblMesaSeleccionada.Text = "SELECCIONE UNA MESA";
+            // 3. RECUPERAR COLORES (MESAS OCUPADAS)
+            foreach (var item in Form1.MesaOcupada)
+            {
+                int numeroMesa = item.Key;
+                bool estaOcupada = item.Value;
+
+                if (estaOcupada && botonesMesas.ContainsKey(numeroMesa))
+                {
+                    botonesMesas[numeroMesa].BackColor = Color.DarkRed;
+                    botonesMesas[numeroMesa].Text = "EN ESPERA";
+                }
+            }
+
+            // 4. Estos son mensajes para los pedidos listos
+
+            if (Form1.PedidosListosParaServir.Count > 0)
+            {
+                string mensajeAlerta = "🔔 ¡PEDIDOS LISTOS PARA ENTREGAR!\n\n";
+
+                // Usamos .ToList() para evitar errores al modificar la lista
+                foreach (Factura f in Form1.PedidosListosParaServir.ToList())
+                {
+                    mensajeAlerta += $"✅ MESA {f.NumeroMesa}\n";
+                    mensajeAlerta += "--------------------------------\n";
+
+                    // Detalle de platos
+                    foreach (var plato in f.PlatosComprados)
+                    {
+                        mensajeAlerta += $"   • {plato.Cantidad} x {plato.Producto} (${plato.Precio})\n";
+                    }
+
+                    mensajeAlerta += "--------------------------------\n";
+                    mensajeAlerta += $"💰 TOTAL A COBRAR: ${f.Total}\n\n";
+
+                    // LIBERAR LA MESA
+                    int numMesa = f.NumeroMesa;
+
+                    if (pedidosPorMesa.ContainsKey(numMesa)) pedidosPorMesa[numMesa].Clear();
+                    if (Form1.MesaOcupada.ContainsKey(numMesa)) Form1.MesaOcupada[numMesa] = false;
+
+                    if (botonesMesas.ContainsKey(numMesa))
+                    {
+                        botonesMesas[numMesa].BackColor = Color.DarkSlateGray;
+                        botonesMesas[numMesa].Text = "DISPONIBLE";
+                    }
+
+                    // Borramos la factura del buzón porque ya la vimos
+                    Form1.PedidosListosParaServir.Remove(f);
+                }
+
+                MessageBox.Show(mensajeAlerta, "Cocina Informa");
+            }
+
+
+            foreach (var item in Form1.MesaOcupada)
+            {
+                int numeroMesa = item.Key;
+                bool estaOcupada = item.Value;
+
+                // Si la memoria dice que está ocupada (TRUE), la pintamos de ROJO
+                if (estaOcupada == true)
+                {
+                    if (botonesMesas.ContainsKey(numeroMesa))
+                    {
+                        botonesMesas[numeroMesa].BackColor = Color.DarkRed; 
+                        botonesMesas[numeroMesa].Text = "EN ESPERA";        
+                    }
+                }
+
+            }
         }
+
 
         // --- LÓGICA DE AGREGAR PLATO ---
         private void btnAgregarPlato_Click(object sender, EventArgs e)
         {
+            // Validaciones
             if (mesaActual == 0) { MessageBox.Show("Seleccione una mesa."); return; }
-            if (cmbPlatos.SelectedIndex == -1) { MessageBox.Show("Seleccione un plato."); return; }
+            if (cmbPlatos.SelectedItem == null) { MessageBox.Show("Seleccione un plato."); return; }
 
-            string plato = cmbPlatos.Text;
+            // 1. OBTENER EL PLATO SELECCIONADO (Ahora es un Objeto, no solo texto)
+            Plato platoSeleccionado = (Plato)cmbPlatos.SelectedItem;
+
+            // 2. Extraer datos directamente del objeto
+            string nombrePlato = platoSeleccionado.Nombre;
+            decimal precioPlato = platoSeleccionado.Precio; // ¡El precio viene automático!
             int cantidad = (int)numCantidad.Value;
-            decimal precio = ObtenerPrecio(plato);
 
-            // Buscar si ya existe para sumar
-            var pedidoExistente = pedidosPorMesa[mesaActual].FirstOrDefault(p => p.Plato == plato);
+            // 3. Buscar si ya existe en la mesa (Lógica de suma)
+            var pedidoExistente = pedidosPorMesa[mesaActual].FirstOrDefault(p => p.Plato == nombrePlato);
 
             if (pedidoExistente != null)
             {
                 pedidoExistente.Cantidad += cantidad;
-                pedidosPorMesa[mesaActual].ResetBindings(); // Actualizar tabla
+                pedidosPorMesa[mesaActual].ResetBindings();
             }
             else
             {
                 pedidosPorMesa[mesaActual].Add(new DetallePedido
                 {
                     Cantidad = cantidad,
-                    Plato = plato,
-                    Precio = precio
+                    Plato = nombrePlato,
+                    Precio = precioPlato
                 });
             }
 
@@ -109,56 +183,71 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Mesas
         // --- SELECCIONAR MESA ---
         private void SeleccionarMesa(int numeroMesa)
         {
+            // 1. Guardar qué mesa estamos tocando
             mesaActual = numeroMesa;
             lblMesaSeleccionada.Text = "MESA " + numeroMesa;
 
-            Button botonMesa = botonesMesas.ContainsKey(numeroMesa) ? botonesMesas[numeroMesa] : null;
+            // 2. SIEMPRE MOSTRAR EL PANEL (Para ver qué pidieron o para pedir nuevo)
+            MostrarPanelDerecho();
 
-            if (botonMesa != null && botonMesa.Text == "OCUPADA")
+            // 3. CARGAR LA LISTA DE PLATOS (Si está vacía, mostrará tabla vacía)
+            if (pedidosPorMesa.ContainsKey(mesaActual))
             {
-                // MESA OCUPADA: MOSTRAR TODO
-                MostrarPanelDerecho();
                 dgvPedido.DataSource = pedidosPorMesa[mesaActual];
-                CalcularTotalPantalla();
             }
-            else
-            {
-                // MESA DISPONIBLE: SOLO MOSTRAR BOTÓN OCUPAR
-                OcultarPanelDerecho();
-                if (btnOcupar != null) btnOcupar.Visible = true;
-                dgvPedido.DataSource = null;
-            }
-        }
 
-        // --- BOTÓN OCUPAR (VERDE) ---
-        private void btnOcupar_Click(object sender, EventArgs e)
-        {
-            if (mesaActual == 0) return;
+            // 4. Calcular Total Visual
+            CalcularTotalPantalla();
 
-            if (botonesMesas.ContainsKey(mesaActual))
-            {
-                botonesMesas[mesaActual].Text = "OCUPADA";
-                botonesMesas[mesaActual].BackColor = Color.Firebrick;
-            }
-            SeleccionarMesa(mesaActual);
+            // 5. ¡AQUÍ ESTÁ LA CLAVE! APLICAR EL CANDADO DE SEGURIDAD
+            BloquearBotonSiEstaOcupada();
         }
 
         // --- BOTÓN FACTURAR ---
+
         private void btnFacturar_Click(object sender, EventArgs e)
         {
             if (mesaActual == 0) return;
-
-            if (MessageBox.Show("¿Facturar y liberar mesa?", "Confirmar", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (pedidosPorMesa[mesaActual].Count == 0)
             {
-                pedidosPorMesa[mesaActual].Clear();
-
-                if (botonesMesas.ContainsKey(mesaActual))
-                {
-                    botonesMesas[mesaActual].Text = "DISPONIBLE";
-                    botonesMesas[mesaActual].BackColor = Color.DarkSlateGray;
-                }
-                SeleccionarMesa(mesaActual);
+                MessageBox.Show("No hay pedidos para enviar a cocina.");
+                return;
             }
+
+            decimal totalCalculado = 0;
+            foreach (var item in pedidosPorMesa[mesaActual]) totalCalculado += item.Total;
+
+            List<Restaurant_PALMERO_proyecto_2.Modulo_Ordenes.DetalleOrden> listaParaGuardar = new List<Restaurant_PALMERO_proyecto_2.Modulo_Ordenes.DetalleOrden>();
+            foreach (var item in pedidosPorMesa[mesaActual])
+            {
+                listaParaGuardar.Add(new Restaurant_PALMERO_proyecto_2.Modulo_Ordenes.DetalleOrden(item.Plato, item.Cantidad, item.Precio));
+            }
+
+            // Se guarda en el inicio
+            Factura nuevaFactura = new Factura(mesaActual, totalCalculado, listaParaGuardar);
+            Form1.HistorialFacturas.Add(nuevaFactura);
+
+            
+            Form1.MesaOcupada[mesaActual] = true; 
+
+            // Visualmente la dejamos ROJA (Ocupada)
+            if (botonesMesas.ContainsKey(mesaActual))
+            {
+                botonesMesas[mesaActual].BackColor = Color.DarkRed; // O el color de ocupado que uses
+                botonesMesas[mesaActual].Text = "EN ESPERA"; // Cambio de texto opcional
+            }
+
+            // --- CAMBIO 3: ¡NO BORRAMOS NADA! (Comentamos la limpieza) ---
+            // pedidosPorMesa[mesaActual].Clear();  <-- NO BORRAR AÚN
+            // mesaActual = 0;                      <-- NO SOLTAR LA MESA
+
+
+            OcultarPanelDerecho();
+            lblMesaSeleccionada.Text = "SELECCIONE UNA MESA";
+            mesaActual = 0; // Soltamos la selección, pero la mesa sigue llena en memoria
+
+            // 4. MENSAJE FINAL
+            MessageBox.Show("Su pedido ha sido creado con éxito y enviado a cocina.", "Pedido Creado");
         }
 
         // --- AUXILIARES ---
@@ -172,18 +261,7 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Mesas
             if (lblTotal != null) lblTotal.Text = "TOTAL: $" + total.ToString("N2");
         }
 
-        private decimal ObtenerPrecio(string plato)
-        {
-            switch (plato)
-            {
-                case "Linguinis con langostinos": return 15m;
-                case "Degustación de mejillones": return 12m;
-                case "Quesillo": return 4m;
-                case "Jugo de Parchita": return 3m;
-                default: return 0m;
-            }
-        }
-
+        
         private void OcultarPanelDerecho()
         {
             if (btnOcupar != null) btnOcupar.Visible = false;
@@ -216,7 +294,66 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Mesas
         // Eventos vacíos para evitar errores del diseñador
         private void cmbPlatos_SelectedIndexChanged(object sender, EventArgs e) { }
         private void numCantidad_ValueChanged(object sender, EventArgs e) { }
-    }
+    
+
+    // Esta funcion se usa para bloquear los botones, cada vez que se necesite bloquear es llaada la funcion
+        private void BloquearBotonSiEstaOcupada()
+        {
+            // 1. Consultar a la memoria suprema (Form1)
+            bool estaOcupada = false;
+            if (Form1.MesaOcupada.ContainsKey(mesaActual))
+            {
+                estaOcupada = Form1.MesaOcupada[mesaActual];
+            }
+
+            // 2. Aplicar bloqueo según el estado
+            if (estaOcupada == true)
+            {
+                // --- MESA OCUPADA (MODO LECTURA) ---
+                if (btnFacturar != null)
+                {
+                    btnFacturar.Enabled = false;             
+                    btnFacturar.Text = "EN ESPERA...";       
+                    btnFacturar.BackColor = Color.Gray;      
+                }
+
+                // Bloquear controles de agregar
+                if (btnAgregarPlato != null) btnAgregarPlato.Enabled = false;
+                if (cmbPlatos != null) cmbPlatos.Enabled = false;
+                if (numCantidad != null) numCantidad.Enabled = false;
+            }
+            else
+            {
+                // --- MESA LIBRE (MODO EDICIÓN) ---
+                if (btnFacturar != null)
+                {
+                    btnFacturar.Enabled = true;              // Desbloqueado
+                    btnFacturar.Text = "CREAR PEDIDO";       
+                    btnFacturar.BackColor = Color.SeaGreen;  // Tu color verde
+                }
+
+                // Reactivar controles
+                if (btnAgregarPlato != null) btnAgregarPlato.Enabled = true;
+                if (cmbPlatos != null) cmbPlatos.Enabled = true;
+                if (numCantidad != null) numCantidad.Enabled = true;
+            }
+        }
+
+        // --- FUNCIÓN RECUPERADA: BOTÓN OCUPAR (Para corregir error de diseño) ---
+        private void btnOcupar_Click(object sender, EventArgs e)
+        {
+            // Aunque ya no lo uses mucho, el diseñador lo busca.
+            // Si quieres que funcione manualmente:
+            if (mesaActual == 0) return;
+
+            if (botonesMesas.ContainsKey(mesaActual))
+            {
+                // Solo cambio visual manual
+                botonesMesas[mesaActual].Text = "OCUPADA";
+                botonesMesas[mesaActual].BackColor = Color.Firebrick;
+            }
+         }
+    
 
     // --- CLASE DE DATOS CONFIGURADA ---
     public class DetallePedido
@@ -237,3 +374,5 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Mesas
         }
     }
 }
+}
+
