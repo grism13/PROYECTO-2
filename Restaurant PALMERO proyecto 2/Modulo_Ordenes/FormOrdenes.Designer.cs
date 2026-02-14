@@ -28,11 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOrdenes));
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
@@ -54,65 +50,41 @@
             button8 = new Button();
             button9 = new Button();
             button10 = new Button();
+            pictureBox6 = new PictureBox();
+            panel6 = new Panel();
+            pictureBox7 = new PictureBox();
+            panel7 = new Panel();
+            pictureBox8 = new PictureBox();
+            panel8 = new Panel();
+            pictureBox9 = new PictureBox();
+            panel9 = new Panel();
+            pictureBox10 = new PictureBox();
+            panel10 = new Panel();
+            pictureBox11 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)OrdenesImg).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
+            panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
+            panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
+            panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(57, 96);
-            label1.Name = "label1";
-            label1.Size = new Size(56, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Mesa 1";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(240, 96);
-            label2.Name = "label2";
-            label2.Size = new Size(56, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Mesa 2";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(426, 96);
-            label3.Name = "label3";
-            label3.Size = new Size(56, 20);
-            label3.TabIndex = 2;
-            label3.Text = "Mesa 3";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(613, 96);
-            label4.Name = "label4";
-            label4.Size = new Size(56, 20);
-            label4.TabIndex = 3;
-            label4.Text = "Mesa 4";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(794, 96);
-            label5.Name = "label5";
-            label5.Size = new Size(56, 20);
-            label5.TabIndex = 4;
-            label5.Text = "Mesa 5";
             // 
             // button1
             // 
-            button1.Location = new Point(43, 215);
-            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Location = new Point(70, 88);
             button1.Name = "button1";
-            button1.Size = new Size(107, 75);
+            button1.Size = new Size(94, 56);
             button1.TabIndex = 5;
             button1.Text = "ESTADO DE PEDIDO";
             button1.UseVisualStyleBackColor = true;
@@ -120,10 +92,9 @@
             // 
             // button2
             // 
-            button2.Location = new Point(225, 215);
-            button2.Margin = new Padding(3, 4, 3, 4);
+            button2.Location = new Point(76, 88);
             button2.Name = "button2";
-            button2.Size = new Size(107, 75);
+            button2.Size = new Size(94, 56);
             button2.TabIndex = 6;
             button2.Text = "ESTADO DE PEDIDO";
             button2.UseVisualStyleBackColor = true;
@@ -131,10 +102,9 @@
             // 
             // button3
             // 
-            button3.Location = new Point(403, 215);
-            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Location = new Point(73, 88);
             button3.Name = "button3";
-            button3.Size = new Size(107, 75);
+            button3.Size = new Size(94, 56);
             button3.TabIndex = 7;
             button3.Text = "ESTADO DE PEDIDO";
             button3.UseVisualStyleBackColor = true;
@@ -142,10 +112,9 @@
             // 
             // button4
             // 
-            button4.Location = new Point(594, 215);
-            button4.Margin = new Padding(3, 4, 3, 4);
+            button4.Location = new Point(77, 88);
             button4.Name = "button4";
-            button4.Size = new Size(107, 75);
+            button4.Size = new Size(94, 56);
             button4.TabIndex = 8;
             button4.Text = "ESTADO DE PEDIDO";
             button4.UseVisualStyleBackColor = true;
@@ -153,10 +122,9 @@
             // 
             // button5
             // 
-            button5.Location = new Point(768, 215);
-            button5.Margin = new Padding(3, 4, 3, 4);
+            button5.Location = new Point(72, 88);
             button5.Name = "button5";
-            button5.Size = new Size(107, 75);
+            button5.Size = new Size(94, 56);
             button5.TabIndex = 9;
             button5.Text = "ESTADO DE PEDIDO";
             button5.UseVisualStyleBackColor = true;
@@ -197,10 +165,9 @@
             // pictureBox5
             // 
             pictureBox5.Image = Properties.Resources.OrdenesTxt;
-            pictureBox5.Location = new Point(134, -24);
-            pictureBox5.Margin = new Padding(3, 4, 3, 4);
+            pictureBox5.Location = new Point(104, -7);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(301, 176);
+            pictureBox5.Size = new Size(263, 132);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 23;
             pictureBox5.TabStop = false;
@@ -250,9 +217,10 @@
             // 
             // button6
             // 
-            button6.Location = new Point(43, 348);
+            button6.Location = new Point(70, 171);
+            button6.Margin = new Padding(3, 2, 3, 2);
             button6.Name = "button6";
-            button6.Size = new Size(94, 29);
+            button6.Size = new Size(82, 22);
             button6.TabIndex = 24;
             button6.Text = "LISTO";
             button6.UseVisualStyleBackColor = true;
@@ -260,9 +228,10 @@
             // 
             // button7
             // 
-            button7.Location = new Point(225, 348);
+            button7.Location = new Point(76, 171);
+            button7.Margin = new Padding(3, 2, 3, 2);
             button7.Name = "button7";
-            button7.Size = new Size(94, 29);
+            button7.Size = new Size(82, 22);
             button7.TabIndex = 25;
             button7.Text = "LISTO";
             button7.UseVisualStyleBackColor = true;
@@ -270,9 +239,10 @@
             // 
             // button8
             // 
-            button8.Location = new Point(403, 348);
+            button8.Location = new Point(85, 171);
+            button8.Margin = new Padding(3, 2, 3, 2);
             button8.Name = "button8";
-            button8.Size = new Size(94, 29);
+            button8.Size = new Size(82, 22);
             button8.TabIndex = 26;
             button8.Text = "LISTO";
             button8.UseVisualStyleBackColor = true;
@@ -280,9 +250,10 @@
             // 
             // button9
             // 
-            button9.Location = new Point(594, 358);
+            button9.Location = new Point(77, 171);
+            button9.Margin = new Padding(3, 2, 3, 2);
             button9.Name = "button9";
-            button9.Size = new Size(94, 29);
+            button9.Size = new Size(82, 22);
             button9.TabIndex = 27;
             button9.Text = "LISTO";
             button9.UseVisualStyleBackColor = true;
@@ -290,36 +261,139 @@
             // 
             // button10
             // 
-            button10.Location = new Point(768, 358);
+            button10.Location = new Point(72, 171);
+            button10.Margin = new Padding(3, 2, 3, 2);
             button10.Name = "button10";
-            button10.Size = new Size(94, 29);
+            button10.Size = new Size(82, 22);
             button10.TabIndex = 28;
             button10.Text = "LISTO";
             button10.UseVisualStyleBackColor = true;
             button10.Click += button10_Click;
             // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = Properties.Resources.ordenes;
+            pictureBox6.Location = new Point(-7, -7);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(146, 149);
+            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox6.TabIndex = 29;
+            pictureBox6.TabStop = false;
+            // 
+            // panel6
+            // 
+            panel6.Controls.Add(pictureBox7);
+            panel6.Controls.Add(button6);
+            panel6.Controls.Add(button1);
+            panel6.Location = new Point(92, 290);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(244, 210);
+            panel6.TabIndex = 30;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.Image = Properties.Resources.Mesa1txt;
+            pictureBox7.Location = new Point(19, 29);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(202, 53);
+            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox7.TabIndex = 35;
+            pictureBox7.TabStop = false;
+            // 
+            // panel7
+            // 
+            panel7.Controls.Add(pictureBox8);
+            panel7.Controls.Add(button2);
+            panel7.Controls.Add(button7);
+            panel7.Location = new Point(378, 104);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(244, 210);
+            panel7.TabIndex = 31;
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.Image = Properties.Resources.Mesa2txt;
+            pictureBox8.Location = new Point(26, 32);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(192, 50);
+            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox8.TabIndex = 36;
+            pictureBox8.TabStop = false;
+            // 
+            // panel8
+            // 
+            panel8.Controls.Add(pictureBox9);
+            panel8.Controls.Add(button8);
+            panel8.Controls.Add(button3);
+            panel8.Location = new Point(584, 396);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(244, 210);
+            panel8.TabIndex = 32;
+            // 
+            // pictureBox9
+            // 
+            pictureBox9.Image = Properties.Resources.Mesa3txt;
+            pictureBox9.Location = new Point(16, 29);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(210, 53);
+            pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox9.TabIndex = 37;
+            pictureBox9.TabStop = false;
+            // 
+            // panel9
+            // 
+            panel9.Controls.Add(pictureBox10);
+            panel9.Controls.Add(button9);
+            panel9.Controls.Add(button4);
+            panel9.Location = new Point(813, 104);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(244, 210);
+            panel9.TabIndex = 33;
+            // 
+            // pictureBox10
+            // 
+            pictureBox10.Image = Properties.Resources.Mesa4txt;
+            pictureBox10.Location = new Point(20, 32);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(196, 50);
+            pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox10.TabIndex = 38;
+            pictureBox10.TabStop = false;
+            // 
+            // panel10
+            // 
+            panel10.Controls.Add(pictureBox11);
+            panel10.Controls.Add(button10);
+            panel10.Controls.Add(button5);
+            panel10.Location = new Point(1089, 290);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(244, 210);
+            panel10.TabIndex = 34;
+            // 
+            // pictureBox11
+            // 
+            pictureBox11.Image = Properties.Resources.Mesa5txt;
+            pictureBox11.Location = new Point(35, 40);
+            pictureBox11.Name = "pictureBox11";
+            pictureBox11.Size = new Size(179, 42);
+            pictureBox11.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox11.TabIndex = 39;
+            pictureBox11.TabStop = false;
+            // 
             // FormOrdenes
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1499, 860);
-            Controls.Add(button10);
-            Controls.Add(button9);
-            Controls.Add(button8);
-            Controls.Add(button7);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            BackColor = Color.White;
+            ClientSize = new Size(1357, 684);
             Controls.Add(pictureBox5);
-            Margin = new Padding(3, 4, 3, 4);
+            Controls.Add(pictureBox6);
+            Controls.Add(panel6);
+            Controls.Add(panel7);
+            Controls.Add(panel8);
+            Controls.Add(panel9);
+            Controls.Add(panel10);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormOrdenes";
             Text = "ORDENES";
             Load += FormOrdenes_Load;
@@ -329,18 +403,21 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)OrdenesImg).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
+            panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+            panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
+            panel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        // Declaración de Variables (Esto es lo que faltaba o estaba duplicado)
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
@@ -365,5 +442,16 @@
         private Button button8;
         private Button button9;
         private Button button10;
+        private PictureBox pictureBox6;
+        private Panel panel6;
+        private Panel panel7;
+        private Panel panel8;
+        private Panel panel9;
+        private Panel panel10;
+        private PictureBox pictureBox7;
+        private PictureBox pictureBox8;
+        private PictureBox pictureBox9;
+        private PictureBox pictureBox10;
+        private PictureBox pictureBox11;
     }
 }
