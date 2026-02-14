@@ -197,6 +197,7 @@
             btnCierreCaja.TabIndex = 24;
             btnCierreCaja.Text = "CERRAR CAJA";
             btnCierreCaja.UseVisualStyleBackColor = false;
+            btnCierreCaja.Click += btnCierreCaja_Click_1;
             // 
             // FormCaja
             // 

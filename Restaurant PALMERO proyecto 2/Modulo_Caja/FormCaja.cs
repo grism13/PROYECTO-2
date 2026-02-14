@@ -11,10 +11,10 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Caja
 {
     public partial class FormCaja : Form
     {
-        // Variable para recordar cuál fila seleccionaste
+        
         Factura facturaSeleccionada = null;
 
-        // --- MAGIA NUEVA: LA CAJA FUERTE ---
+        
         public static List<Factura> VentasDelDia = new List<Factura>();
         public static decimal TotalAcumulado = 0;
         // -----------------------------------
@@ -64,7 +64,7 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Caja
             fuenteDatos.DataSource = Form1.HistorialFacturas;
             dgvCaja.DataSource = fuenteDatos;
 
-            // MAGIA NUEVA: Cargar el historial al abrir la ventana
+           
             RefrescarHistorial();
         }
 
@@ -89,7 +89,7 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Caja
 
             if (respuesta == DialogResult.Yes)
             {
-                // --- MAGIA NUEVA: Guardar en el historial antes de borrar ---
+               
                 VentasDelDia.Add(facturaSeleccionada);
                 TotalAcumulado += facturaSeleccionada.Total;
                 RefrescarHistorial();
@@ -102,7 +102,7 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Caja
                     Form1.MesaOcupada[facturaSeleccionada.NumeroMesa] = false;
                 }
 
-                // Usamos la función de Eliezer para que la tabla se actualice bien
+                
                 CargarFacturasPendientes();
 
                 facturaSeleccionada = null;
@@ -110,7 +110,7 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Caja
             }
         }
 
-        // --- MAGIA NUEVA: Función para actualizar la lista derecha y el total ---
+        
         private void RefrescarHistorial()
         {
             lstVentasDia.Items.Clear();
@@ -121,7 +121,7 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Caja
             lblTotalDia.Text = $"TOTAL: ${TotalAcumulado:N2}";
         }
 
-        // --- MAGIA NUEVA: Botón de Cierre de Caja ---
+
         private void btnCierreCaja_Click(object sender, EventArgs e)
         {
 
@@ -129,23 +129,33 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Caja
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // 1. Verificamos si hay ventas registradas antes de intentar cerrar, Grisangelis Maria
+           
+        }
+
+        private void IstVentasDia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCierreCaja_Click_1(object sender, EventArgs e)
+        {
+            
             if (VentasDelDia.Count == 0)
             {
-                MessageBox.Show("No hay ventas registradas en este momento para hacer un cierre de caja, Grisangelis Maria.", "Caja Vacía", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No hay ventas registradas en este momento para hacer un cierre de caja,", "Caja Vacía", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
-            // 2. Armamos el mensaje detallado con el total vendido en todo el día, Grisangelis Maria
+            
             string reporte = $"=== REPORTE FINAL DEL DÍA ===\n\n";
             reporte += $"Mesas procesadas: {VentasDelDia.Count}\n";
             reporte += $"TOTAL VENDIDO: $ {TotalAcumulado:N2}\n\n";
-            reporte += "¿Estás segura de que deseas cerrar la caja, Grisangelis Maria? Al confirmar, se borrará todo el historial de la pantalla para empezar un nuevo turno.";
+            reporte += "¿Estás segura de que deseas cerrar la caja, Al confirmar, se borrará todo el historial de la pantalla para empezar un nuevo turno.";
 
-            // 3. Mostramos la ventana y esperamos la respuesta (Sí o No)
+            
             DialogResult confirmacion = MessageBox.Show(reporte, "Confirmar Cierre de Caja", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            // 4. Si la respuesta es SÍ, ejecutamos la limpieza total, Grisangelis Maria
+            
             if (confirmacion == DialogResult.Yes)
             {
                 // A. Vaciamos la lista de la memoria
@@ -158,13 +168,8 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Caja
                 RefrescarHistorial();
 
                 // Mensaje final de éxito
-                MessageBox.Show("¡Caja cerrada y limpiada exitosamente, Grisangelis Maria! El sistema está listo para un nuevo día.", "Cierre Completo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("¡Caja cerrada y limpiada exitosamente, El sistema está listo para un nuevo día.", "Cierre Completo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-        }
-
-        private void IstVentasDia_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
