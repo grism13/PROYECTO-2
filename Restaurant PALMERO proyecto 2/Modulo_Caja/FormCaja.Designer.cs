@@ -37,6 +37,9 @@
             factura = new Label();
             lblTotalPagar = new Label();
             btnPagar = new Button();
+            lstVentasDia = new ListBox();
+            lblTotalDia = new Label();
+            btnCierreCaja = new Button();
             ((System.ComponentModel.ISupportInitialize)CajaImg).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvCaja).BeginInit();
@@ -51,10 +54,9 @@
             // CajaImg
             // 
             CajaImg.Image = Properties.Resources.caja;
-            CajaImg.Location = new Point(1275, 2);
-            CajaImg.Margin = new Padding(3, 4, 3, 4);
+            CajaImg.Location = new Point(1116, 2);
             CajaImg.Name = "CajaImg";
-            CajaImg.Size = new Size(225, 243);
+            CajaImg.Size = new Size(197, 182);
             CajaImg.SizeMode = PictureBoxSizeMode.Zoom;
             CajaImg.TabIndex = 15;
             CajaImg.TabStop = false;
@@ -62,10 +64,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.CajaTxt;
-            pictureBox1.Location = new Point(1053, 31);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Location = new Point(921, 23);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(243, 164);
+            pictureBox1.Size = new Size(213, 123);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 16;
             pictureBox1.TabStop = false;
@@ -75,13 +76,14 @@
             dgvCaja.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvCaja.BackgroundColor = Color.White;
             dgvCaja.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCaja.Location = new Point(49, 99);
+            dgvCaja.Location = new Point(43, 74);
+            dgvCaja.Margin = new Padding(3, 2, 3, 2);
             dgvCaja.Name = "dgvCaja";
             dgvCaja.ReadOnly = true;
             dgvCaja.RowHeadersVisible = false;
             dgvCaja.RowHeadersWidth = 51;
             dgvCaja.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvCaja.Size = new Size(777, 640);
+            dgvCaja.Size = new Size(680, 480);
             dgvCaja.TabIndex = 17;
             dgvCaja.CellClick += dgvCaja_CellClick;
             // 
@@ -89,9 +91,9 @@
             // 
             factura.AutoSize = true;
             factura.Font = new Font("Segoe UI", 18F);
-            factura.Location = new Point(60, 35);
+            factura.Location = new Point(52, 26);
             factura.Name = "factura";
-            factura.Size = new Size(158, 41);
+            factura.Size = new Size(126, 32);
             factura.TabIndex = 18;
             factura.Text = "FACTURAS";
             // 
@@ -100,9 +102,9 @@
             lblTotalPagar.AutoSize = true;
             lblTotalPagar.Font = new Font("Segoe UI", 15F);
             lblTotalPagar.ForeColor = Color.SeaGreen;
-            lblTotalPagar.Location = new Point(658, 31);
+            lblTotalPagar.Location = new Point(576, 23);
             lblTotalPagar.Name = "lblTotalPagar";
-            lblTotalPagar.Size = new Size(153, 35);
+            lblTotalPagar.Size = new Size(123, 28);
             lblTotalPagar.TabIndex = 19;
             lblTotalPagar.Text = "TOTAL: $0.00";
             // 
@@ -111,20 +113,51 @@
             btnPagar.BackColor = Color.DarkGreen;
             btnPagar.Font = new Font("Segoe UI", 20F);
             btnPagar.ForeColor = Color.White;
-            btnPagar.Location = new Point(971, 539);
+            btnPagar.Location = new Point(745, 413);
+            btnPagar.Margin = new Padding(3, 2, 3, 2);
             btnPagar.Name = "btnPagar";
-            btnPagar.Size = new Size(445, 200);
+            btnPagar.Size = new Size(389, 150);
             btnPagar.TabIndex = 20;
             btnPagar.Text = "PAGAR";
             btnPagar.UseVisualStyleBackColor = false;
             btnPagar.Click += btnPagar_Click;
             // 
+            // lstVentasDia
+            // 
+            lstVentasDia.FormattingEnabled = true;
+            lstVentasDia.Location = new Point(930, 269);
+            lstVentasDia.Name = "lstVentasDia";
+            lstVentasDia.Size = new Size(309, 124);
+            lstVentasDia.TabIndex = 21;
+            // 
+            // lblTotalDia
+            // 
+            lblTotalDia.AutoSize = true;
+            lblTotalDia.Location = new Point(1252, 381);
+            lblTotalDia.Name = "lblTotalDia";
+            lblTotalDia.Size = new Size(65, 15);
+            lblTotalDia.TabIndex = 22;
+            lblTotalDia.Text = "Cerrar Caja";
+            // 
+            // btnCierreCaja
+            // 
+            btnCierreCaja.Location = new Point(1140, 413);
+            btnCierreCaja.Name = "btnCierreCaja";
+            btnCierreCaja.Size = new Size(211, 150);
+            btnCierreCaja.TabIndex = 23;
+            btnCierreCaja.Text = "CERRAR CAJA";
+            btnCierreCaja.UseVisualStyleBackColor = true;
+            btnCierreCaja.Click += button1_Click;
+            // 
             // FormCaja
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1542, 851);
+            ClientSize = new Size(1349, 638);
+            Controls.Add(btnCierreCaja);
+            Controls.Add(lblTotalDia);
+            Controls.Add(lstVentasDia);
             Controls.Add(btnPagar);
             Controls.Add(lblTotalPagar);
             Controls.Add(factura);
@@ -132,6 +165,7 @@
             Controls.Add(pictureBox1);
             Controls.Add(CajaImg);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormCaja";
             Text = "CAJA";
             Load += FormCaja_Load;
@@ -150,5 +184,8 @@
         private Label factura;
         private Label lblTotalPagar;
         private Button btnPagar;
+        private ListBox lstVentasDia;
+        private Label lblTotalDia;
+        private Button btnCierreCaja;
     }
 }
