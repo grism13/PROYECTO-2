@@ -41,7 +41,7 @@
             groupBox1 = new GroupBox();
             lblTotalDia = new Label();
             pictureBox3 = new PictureBox();
-            IstVentasDia = new ListBox();
+            lstVentasDia = new ListBox();
             btnCierreCaja = new Button();
             ((System.ComponentModel.ISupportInitialize)CajaImg).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -147,7 +147,7 @@
             // 
             groupBox1.Controls.Add(lblTotalDia);
             groupBox1.Controls.Add(pictureBox3);
-            groupBox1.Controls.Add(IstVentasDia);
+            groupBox1.Controls.Add(lstVentasDia);
             groupBox1.FlatStyle = FlatStyle.Flat;
             groupBox1.Location = new Point(668, 39);
             groupBox1.Name = "groupBox1";
@@ -176,13 +176,14 @@
             pictureBox3.TabIndex = 1;
             pictureBox3.TabStop = false;
             // 
-            // IstVentasDia
+            // lstVentasDia
             // 
-            IstVentasDia.FormattingEnabled = true;
-            IstVentasDia.Location = new Point(87, 56);
-            IstVentasDia.Name = "IstVentasDia";
-            IstVentasDia.Size = new Size(516, 229);
-            IstVentasDia.TabIndex = 0;
+            lstVentasDia.FormattingEnabled = true;
+            lstVentasDia.Location = new Point(87, 56);
+            lstVentasDia.Name = "lstVentasDia";
+            lstVentasDia.Size = new Size(516, 229);
+            lstVentasDia.TabIndex = 0;
+            lstVentasDia.SelectedIndexChanged += IstVentasDia_SelectedIndexChanged;
             // 
             // btnCierreCaja
             // 
@@ -236,7 +237,7 @@
         private PictureBox pictureBox2;
         private GroupBox porpagar;
         private GroupBox groupBox1;
-        private ListBox IstVentasDia;
+        private ListBox lstVentasDia;
         private Label lblTotalDia;
         private PictureBox pictureBox3;
         private Button btnCierreCaja;

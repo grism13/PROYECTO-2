@@ -124,7 +124,7 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Caja
         // --- MAGIA NUEVA: Botón de Cierre de Caja ---
         private void btnCierreCaja_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -160,6 +160,11 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Caja
                 // Mensaje final de éxito
                 MessageBox.Show("¡Caja cerrada y limpiada exitosamente, Grisangelis Maria! El sistema está listo para un nuevo día.", "Cierre Completo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void IstVentasDia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
