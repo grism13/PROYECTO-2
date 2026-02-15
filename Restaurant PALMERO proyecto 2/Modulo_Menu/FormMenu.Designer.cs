@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             MenuImg = new PictureBox();
             MenuTxt = new PictureBox();
@@ -105,6 +106,7 @@
             // panel2
             // 
             panel2.BackColor = Color.White;
+            panel2.Controls.Add(btnLimpiar);
             panel2.Controls.Add(txtPrecio);
             panel2.Controls.Add(dolarimg);
             panel2.Controls.Add(txtDescripcion);
@@ -278,7 +280,7 @@
             dgvPlatos.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.White;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = Color.FromArgb(0, 0, 64);
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
@@ -286,6 +288,14 @@
             dgvPlatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvPlatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvPlatos.Columns.AddRange(new DataGridViewColumn[] { ColumnaNombre, ColumnaPrecio, ColumnaCategoría, ColumnaDescripción });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.White;
+            dataGridViewCellStyle2.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(192, 192, 255);
+            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvPlatos.DefaultCellStyle = dataGridViewCellStyle2;
             dgvPlatos.EnableHeadersVisualStyles = false;
             dgvPlatos.Location = new Point(17, 123);
             dgvPlatos.MultiSelect = false;
@@ -373,12 +383,16 @@
             // 
             // btnLimpiar
             // 
-            btnLimpiar.Location = new Point(780, 524);
+            btnLimpiar.BackColor = Color.SteelBlue;
+            btnLimpiar.FlatStyle = FlatStyle.Flat;
+            btnLimpiar.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnLimpiar.ForeColor = Color.White;
+            btnLimpiar.Location = new Point(273, 12);
             btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(75, 23);
+            btnLimpiar.Size = new Size(75, 36);
             btnLimpiar.TabIndex = 19;
             btnLimpiar.Text = "Limpiar";
-            btnLimpiar.UseVisualStyleBackColor = true;
+            btnLimpiar.UseVisualStyleBackColor = false;
             btnLimpiar.Click += button1_Click;
             // 
             // FormMenu
@@ -387,7 +401,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1348, 672);
-            Controls.Add(btnLimpiar);
             Controls.Add(txtBuscar);
             Controls.Add(textoenelmenu);
             Controls.Add(dgvPlatos);

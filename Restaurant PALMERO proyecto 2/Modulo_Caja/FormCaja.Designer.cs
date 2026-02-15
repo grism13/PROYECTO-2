@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCaja));
             contextMenuStrip1 = new ContextMenuStrip(components);
             CajaImg = new PictureBox();
@@ -80,9 +82,29 @@
             // 
             // dgvCaja
             // 
+            dgvCaja.AllowUserToAddRows = false;
             dgvCaja.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvCaja.BackgroundColor = Color.White;
+            dgvCaja.BorderStyle = BorderStyle.None;
+            dgvCaja.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.DarkSlateGray;
+            dataGridViewCellStyle1.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(128, 128, 255);
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvCaja.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvCaja.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.White;
+            dataGridViewCellStyle2.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvCaja.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvCaja.EnableHeadersVisualStyles = false;
             dgvCaja.Location = new Point(54, 108);
             dgvCaja.Margin = new Padding(3, 2, 3, 2);
             dgvCaja.Name = "dgvCaja";
@@ -178,10 +200,15 @@
             // 
             // lstVentasDia
             // 
+            lstVentasDia.BackColor = Color.White;
+            lstVentasDia.BorderStyle = BorderStyle.None;
+            lstVentasDia.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lstVentasDia.ForeColor = Color.Black;
             lstVentasDia.FormattingEnabled = true;
             lstVentasDia.Location = new Point(87, 56);
             lstVentasDia.Name = "lstVentasDia";
-            lstVentasDia.Size = new Size(516, 229);
+            lstVentasDia.SelectionMode = SelectionMode.None;
+            lstVentasDia.Size = new Size(516, 221);
             lstVentasDia.TabIndex = 0;
             lstVentasDia.SelectedIndexChanged += IstVentasDia_SelectedIndexChanged;
             // 

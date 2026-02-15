@@ -82,9 +82,14 @@
             // 
             // button1
             // 
-            button1.Location = new Point(70, 88);
+            button1.BackgroundImage = Properties.Resources.logo_completo;
+            button1.Cursor = Cursors.Hand;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(57, 105);
             button1.Name = "button1";
-            button1.Size = new Size(94, 56);
+            button1.Size = new Size(133, 64);
             button1.TabIndex = 5;
             button1.Text = "ESTADO DE PEDIDO";
             button1.UseVisualStyleBackColor = true;
@@ -92,9 +97,14 @@
             // 
             // button2
             // 
-            button2.Location = new Point(76, 88);
+            button2.BackgroundImage = Properties.Resources.logo_completo;
+            button2.Cursor = Cursors.Hand;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(57, 107);
             button2.Name = "button2";
-            button2.Size = new Size(94, 56);
+            button2.Size = new Size(126, 67);
             button2.TabIndex = 6;
             button2.Text = "ESTADO DE PEDIDO";
             button2.UseVisualStyleBackColor = true;
@@ -102,9 +112,13 @@
             // 
             // button3
             // 
-            button3.Location = new Point(73, 88);
+            button3.BackgroundImage = Properties.Resources.logo_completo;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(62, 104);
             button3.Name = "button3";
-            button3.Size = new Size(94, 56);
+            button3.Size = new Size(122, 66);
             button3.TabIndex = 7;
             button3.Text = "ESTADO DE PEDIDO";
             button3.UseVisualStyleBackColor = true;
@@ -112,9 +126,12 @@
             // 
             // button4
             // 
-            button4.Location = new Point(77, 88);
+            button4.BackgroundImage = Properties.Resources.logo_completo;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
+            button4.Location = new Point(59, 107);
             button4.Name = "button4";
-            button4.Size = new Size(94, 56);
+            button4.Size = new Size(127, 67);
             button4.TabIndex = 8;
             button4.Text = "ESTADO DE PEDIDO";
             button4.UseVisualStyleBackColor = true;
@@ -122,9 +139,12 @@
             // 
             // button5
             // 
-            button5.Location = new Point(72, 88);
+            button5.BackgroundImage = Properties.Resources.logo_completo;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
+            button5.Location = new Point(62, 104);
             button5.Name = "button5";
-            button5.Size = new Size(94, 56);
+            button5.Size = new Size(127, 65);
             button5.TabIndex = 9;
             button5.Text = "ESTADO DE PEDIDO";
             button5.UseVisualStyleBackColor = true;
@@ -217,57 +237,79 @@
             // 
             // button6
             // 
-            button6.Location = new Point(70, 171);
+            button6.BackColor = Color.SeaGreen;
+            button6.Cursor = Cursors.Hand;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button6.ForeColor = Color.White;
+            button6.Location = new Point(70, 210);
             button6.Margin = new Padding(3, 2, 3, 2);
             button6.Name = "button6";
-            button6.Size = new Size(82, 22);
+            button6.Size = new Size(102, 23);
             button6.TabIndex = 24;
             button6.Text = "LISTO";
-            button6.UseVisualStyleBackColor = true;
+            button6.UseVisualStyleBackColor = false;
             button6.Click += button6_Click;
             // 
             // button7
             // 
-            button7.Location = new Point(76, 171);
+            button7.BackColor = Color.SeaGreen;
+            button7.Cursor = Cursors.Hand;
+            button7.FlatStyle = FlatStyle.Flat;
+            button7.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button7.ForeColor = Color.White;
+            button7.Location = new Point(66, 204);
             button7.Margin = new Padding(3, 2, 3, 2);
             button7.Name = "button7";
-            button7.Size = new Size(82, 22);
+            button7.Size = new Size(104, 25);
             button7.TabIndex = 25;
             button7.Text = "LISTO";
-            button7.UseVisualStyleBackColor = true;
+            button7.UseVisualStyleBackColor = false;
             button7.Click += button7_Click;
             // 
             // button8
             // 
-            button8.Location = new Point(85, 171);
+            button8.BackColor = Color.SeaGreen;
+            button8.FlatStyle = FlatStyle.Flat;
+            button8.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold);
+            button8.ForeColor = Color.White;
+            button8.Location = new Point(71, 210);
             button8.Margin = new Padding(3, 2, 3, 2);
             button8.Name = "button8";
-            button8.Size = new Size(82, 22);
+            button8.Size = new Size(103, 24);
             button8.TabIndex = 26;
             button8.Text = "LISTO";
-            button8.UseVisualStyleBackColor = true;
+            button8.UseVisualStyleBackColor = false;
             button8.Click += button8_Click;
             // 
             // button9
             // 
-            button9.Location = new Point(77, 171);
+            button9.BackColor = Color.SeaGreen;
+            button9.FlatStyle = FlatStyle.Flat;
+            button9.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold);
+            button9.ForeColor = Color.White;
+            button9.Location = new Point(70, 205);
             button9.Margin = new Padding(3, 2, 3, 2);
             button9.Name = "button9";
-            button9.Size = new Size(82, 22);
+            button9.Size = new Size(104, 24);
             button9.TabIndex = 27;
             button9.Text = "LISTO";
-            button9.UseVisualStyleBackColor = true;
+            button9.UseVisualStyleBackColor = false;
             button9.Click += button9_Click;
             // 
             // button10
             // 
-            button10.Location = new Point(72, 171);
+            button10.BackColor = Color.SeaGreen;
+            button10.FlatStyle = FlatStyle.Flat;
+            button10.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold);
+            button10.ForeColor = Color.White;
+            button10.Location = new Point(62, 210);
             button10.Margin = new Padding(3, 2, 3, 2);
             button10.Name = "button10";
-            button10.Size = new Size(82, 22);
+            button10.Size = new Size(112, 26);
             button10.TabIndex = 28;
             button10.Text = "LISTO";
-            button10.UseVisualStyleBackColor = true;
+            button10.UseVisualStyleBackColor = false;
             button10.Click += button10_Click;
             // 
             // pictureBox6
@@ -282,12 +324,13 @@
             // 
             // panel6
             // 
+            panel6.BorderStyle = BorderStyle.FixedSingle;
             panel6.Controls.Add(pictureBox7);
             panel6.Controls.Add(button6);
             panel6.Controls.Add(button1);
             panel6.Location = new Point(92, 290);
             panel6.Name = "panel6";
-            panel6.Size = new Size(244, 210);
+            panel6.Size = new Size(244, 251);
             panel6.TabIndex = 30;
             // 
             // pictureBox7
@@ -302,12 +345,13 @@
             // 
             // panel7
             // 
+            panel7.BorderStyle = BorderStyle.FixedSingle;
             panel7.Controls.Add(pictureBox8);
             panel7.Controls.Add(button2);
             panel7.Controls.Add(button7);
             panel7.Location = new Point(378, 104);
             panel7.Name = "panel7";
-            panel7.Size = new Size(244, 210);
+            panel7.Size = new Size(244, 249);
             panel7.TabIndex = 31;
             // 
             // pictureBox8
@@ -322,12 +366,13 @@
             // 
             // panel8
             // 
+            panel8.BorderStyle = BorderStyle.FixedSingle;
             panel8.Controls.Add(pictureBox9);
             panel8.Controls.Add(button8);
             panel8.Controls.Add(button3);
             panel8.Location = new Point(584, 396);
             panel8.Name = "panel8";
-            panel8.Size = new Size(244, 210);
+            panel8.Size = new Size(244, 250);
             panel8.TabIndex = 32;
             // 
             // pictureBox9
@@ -342,12 +387,13 @@
             // 
             // panel9
             // 
+            panel9.BorderStyle = BorderStyle.FixedSingle;
             panel9.Controls.Add(pictureBox10);
             panel9.Controls.Add(button9);
             panel9.Controls.Add(button4);
             panel9.Location = new Point(813, 104);
             panel9.Name = "panel9";
-            panel9.Size = new Size(244, 210);
+            panel9.Size = new Size(244, 249);
             panel9.TabIndex = 33;
             // 
             // pictureBox10
@@ -362,18 +408,19 @@
             // 
             // panel10
             // 
+            panel10.BorderStyle = BorderStyle.FixedSingle;
             panel10.Controls.Add(pictureBox11);
             panel10.Controls.Add(button10);
             panel10.Controls.Add(button5);
             panel10.Location = new Point(1089, 290);
             panel10.Name = "panel10";
-            panel10.Size = new Size(244, 210);
+            panel10.Size = new Size(244, 251);
             panel10.TabIndex = 34;
             // 
             // pictureBox11
             // 
             pictureBox11.Image = Properties.Resources.Mesa5txt;
-            pictureBox11.Location = new Point(35, 40);
+            pictureBox11.Location = new Point(34, 40);
             pictureBox11.Name = "pictureBox11";
             pictureBox11.Size = new Size(179, 42);
             pictureBox11.SizeMode = PictureBoxSizeMode.Zoom;
@@ -393,6 +440,8 @@
             Controls.Add(panel8);
             Controls.Add(panel9);
             Controls.Add(panel10);
+            Font = new Font("Times New Roman", 9.75F, FontStyle.Bold);
+            ForeColor = Color.White;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormOrdenes";
             Text = "ORDENES";
