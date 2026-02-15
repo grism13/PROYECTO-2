@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Collections.Generic; 
-using Restaurant_PALMERO_proyecto_2; // ESte es para aedeer a la informacion de Form1 y despues a la infomacion de acturas
+using Restaurant_PALMERO_proyecto_2; // eSte es para aedeer a la informacion de Form1 y despues a la infomacion de acturas
 
 namespace Restaurant_PALMERO_proyecto_2.Modulo_Ordenes
 {
@@ -31,7 +31,7 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Ordenes
 
             foreach (Factura factura in Form1.HistorialFacturas)
             {
-                // FILTRO NUEVO: Solo cargamos si SIGUE EN COCINA
+                // solo cargamos si SIGUE EN COCINA
                 if (factura.EnCocina == true)
                 {
                     switch (factura.NumeroMesa)
@@ -62,7 +62,7 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Ordenes
            
         }
 
-        //Funcion paara colocar los mensajes de los botones sin tanto codigo
+        //funcion paara colocar los mensajes de los botones sin tanto codigo
         private void MostrarMensajePedido(Factura orden)
         {
             

@@ -1,6 +1,6 @@
 ﻿using System;
 
-// FÍJATE BIEN AQUÍ: Debe decir ".Modulo_Ordenes" al final
+
 namespace Restaurant_PALMERO_proyecto_2.Modulo_Ordenes
 {
     public class DetalleOrden

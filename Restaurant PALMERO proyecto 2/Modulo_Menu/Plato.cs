@@ -18,7 +18,7 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Menu // Se guardará en la misma 
         // 2. CONSTRUCTOR VACÍO
         public Plato() { }
 
-        // 3. CONSTRUCTOR (Solo 4 cosas: SIN FOTO)
+        // 3. CONSTRUCTOR 
         public Plato(string nombre, decimal precio, string categoria, string descripcion)
         {
             Nombre = nombre;

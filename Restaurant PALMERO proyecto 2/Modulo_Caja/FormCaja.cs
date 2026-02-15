@@ -17,7 +17,7 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Caja
         
         public static List<Factura> VentasDelDia = new List<Factura>();
         public static decimal TotalAcumulado = 0;
-        // -----------------------------------
+        
 
         public FormCaja()
         {
@@ -93,7 +93,7 @@ namespace Restaurant_PALMERO_proyecto_2.Modulo_Caja
                 VentasDelDia.Add(facturaSeleccionada);
                 TotalAcumulado += facturaSeleccionada.Total;
                 RefrescarHistorial();
-                // ------------------------------------------------------------
+                
 
                 Form1.HistorialFacturas.Remove(facturaSeleccionada);
 
